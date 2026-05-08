@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vilkår for brug — Hemly, prisestimat på danske boliger</title>
+<meta name="description" content="Vilkår for brug af Hemly — appen der giver et prisestimat på enhver dansk bolig på under 10 sekunder. Baseret på offentlige ejendomsdata.">
+<meta name="keywords" content="Hemly vilkår, boligpris app betingelser, prisestimat bolig vilkår, ejendomsdata app ansvar">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hemly.dk/vilkaar.html">
+<meta property="og:title" content="Vilkår for brug — Hemly">
+<meta property="og:description" content="Vilkår for brug af Hemly — appen der giver prisestimater på danske boliger.">
+<meta property="og:url" content="https://hemly.dk/vilkaar.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green: #1C5C3E;
+    --green-light: #A8D5B5;
+    --stone: #F8F6F0;
+    --ink: #111110;
+    --ink-mid: #555550;
+    --ink-muted: #8A8A84;
+    --border: rgba(0,0,0,0.09);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Instrument Sans', sans-serif; color: var(--ink); background: #fff; -webkit-font-smoothing: antialiased; }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%; height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--green); }
+  .nav-back { font-size: 14px; color: var(--ink-mid); text-decoration: none; display: flex; align-items: center; gap: 6px; }
+  .nav-back:hover { color: var(--ink); }
+
+  .hero {
+    background: var(--green);
+    padding: 64px 5% 56px;
+  }
+  .hero-label { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 12px; }
+  .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 4vw, 48px); color: #fff; letter-spacing: -0.5px; margin-bottom: 12px; }
+  .hero-date { font-size: 14px; color: rgba(255,255,255,0.55); }
+
+  .content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 5% 96px;
+  }
+
+  .content h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    color: var(--ink);
+    margin-top: 48px;
+    margin-bottom: 14px;
+  }
+  .content h2:first-child { margin-top: 0; }
+
+  .content p {
+    font-size: 15px;
+    color: var(--ink-mid);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+
+  .content ul {
+    margin: 0 0 14px 20px;
+  }
+
+  .content ul li {
+    font-size: 15px;
+    color: var(--ink-mid);
+    line-height: 1.8;
+    margin-bottom: 6px;
+  }
+
+  .content a { color: var(--green); text-decoration: none; }
+  .content a:hover { text-decoration: underline; }
+
+  .divider {
+    border: none;
+    border-top: 1px solid #EDEBE4;
+    margin: 40px 0;
+  }
+
+  .highlight-box {
+    background: #FFF8E7;
+    border-left: 3px solid #F4C95D;
+    border-radius: 0 12px 12px 0;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .highlight-box p { margin-bottom: 0; color: var(--ink); }
+
+  .contact-box {
+    background: var(--stone);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-top: 48px;
+  }
+  .contact-box p { margin-bottom: 4px; }
+
+  footer {
+    background: #111;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding: 32px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: #fff; }
+  .footer-logo span { color: var(--green-light); }
+  .footer-links { display: flex; gap: 24px; list-style: none; }
+  .footer-links a { font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; }
+  .footer-links a:hover { color: rgba(255,255,255,0.7); }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="/">Hem<span>ly</span></a>
+  <a class="nav-back" href="/">← Tilbage til forsiden</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-label">Juridisk</div>
+  <h1>Vilkår for brug</h1>
+  <div class="hero-date">Sidst opdateret: maj 2026</div>
+</div>
+
+<div class="content">
+
+  <h2>1. Accept af vilkår</h2>
+  <p>Ved at downloade, installere eller bruge Hemly-appen eller besøge hemly.dk accepterer du disse vilkår for brug. Hvis du ikke accepterer vilkårene, bedes du undlade at bruge tjenesten.</p>
+
+  <hr class="divider">
+
+  <h2>2. Om Hemly</h2>
+  <p>Hemly er en gratis app der giver indikative prisestimater på danske boliger baseret på offentligt tilgængelige ejendomsdata. Hemly er udviklet og drives af en dansk enkeltmandsvirksomhed.</p>
+
+  <div class="highlight-box">
+    <p><strong>Vigtigt:</strong> Prisestimater fra Hemly er vejledende og indikative. De er ikke officielle ejendomsvurderinger og må ikke bruges som grundlag for finansielle beslutninger, køb, salg eller belåning af ejendomme.</p>
+  </div>
+
+  <hr class="divider">
+
+  <h2>3. Brug af tjenesten</h2>
+  <p>Du må bruge Hemly til personlige, ikke-kommercielle formål. Det er ikke tilladt at:</p>
+  <ul>
+    <li>Bruge appen til systematisk dataindsamling eller scraping</li>
+    <li>Videresælge eller kommercielt udnytte data fra appen</li>
+    <li>Forsøge at tilgå bagvedliggende systemer eller API'er uautoriseret</li>
+    <li>Bruge appen på en måde der skader andre brugere eller tjenesten</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h2>4. Prisestimater og nøjagtighed</h2>
+  <p>Hemly leverer prisestimater baseret på tilgængelige offentlige data. Vi gør vores bedste for at levere præcise estimater, men:</p>
+  <ul>
+    <li>Estimater er algoritmisk genererede og ikke udarbejdet af en ejendomsmægler</li>
+    <li>Faktiske handelspriser kan afvige væsentligt fra estimater</li>
+    <li>Data kan være forældede eller ufuldstændige</li>
+    <li>Hemly påtager sig intet ansvar for beslutninger truffet på baggrund af estimater</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h2>5. Intellektuel ejendomsret</h2>
+  <p>Alt indhold i Hemly-appen og på hemly.dk — herunder design, tekst, logo og kode — tilhører Hemly og er beskyttet af ophavsret. Du må ikke kopiere, distribuere eller ændre indholdet uden skriftlig tilladelse.</p>
+
+  <hr class="divider">
+
+  <h2>6. Tredjepartsdata</h2>
+  <p>Hemly benytter offentlige danske ejendomsdata fra bl.a. Danmarks Adressers Web API (DAWA) og Datafordeler. Disse data er underlagt de respektive myndigheders egne vilkår og licenser.</p>
+
+  <hr class="divider">
+
+  <h2>7. Ansvarsbegrænsning</h2>
+  <p>Hemly stilles til rådighed "som den er og forefindes". Vi fraskriver os i videst muligt omfang ansvar for:</p>
+  <ul>
+    <li>Tab opstået på baggrund af estimater eller data fra appen</li>
+    <li>Midlertidige afbrydelser eller fejl i tjenesten</li>
+    <li>Tab af data gemt lokalt på din enhed</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h2>8. Ændringer til vilkår og tjeneste</h2>
+  <p>Vi forbeholder os retten til at ændre disse vilkår og tjenestens funktioner med rimeligt varsel. Fortsat brug af appen efter ændringer betragtes som accept af de opdaterede vilkår.</p>
+
+  <hr class="divider">
+
+  <h2>9. Gældende ret</h2>
+  <p>Disse vilkår er underlagt dansk ret. Eventuelle tvister afgøres ved de danske domstole.</p>
+
+  <div class="contact-box">
+    <p><strong>Spørgsmål til vilkårene?</strong></p>
+    <p>Kontakt os på <a href="mailto:hej@hemly.dk">hej@hemly.dk</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">Hem<span>ly</span></div>
+  <ul class="footer-links">
+    <li><a href="/privatlivspolitik.html">Privatlivspolitik</a></li>
+    <li><a href="/vilkaar.html">Vilkår for brug</a></li>
+    <li><a href="/kontakt.html">Kontakt</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Hemly</div>
+</footer>
+
+</body>
+</html>
