@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privatlivspolitik — Hemly, prisestimat på enhver dansk bolig</title>
+<meta name="description" content="Hemlys privatlivspolitik. Hemly giver et prisestimat på enhver dansk bolig på under 10 sekunder — baseret på offentlige ejendomsdata. Vi indsamler minimal data og kræver ingen login.">
+<meta name="keywords" content="Hemly privatlivspolitik, boligpris app GDPR, prisestimat bolig data, ejendomsdata app privatliv">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hemly.dk/privatlivspolitik.html">
+<meta property="og:title" content="Privatlivspolitik — Hemly">
+<meta property="og:description" content="Hemly giver et prisestimat på enhver dansk bolig på under 10 sekunder. Læs hvordan vi håndterer dine data.">
+<meta property="og:url" content="https://hemly.dk/privatlivspolitik.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green: #1C5C3E;
+    --green-light: #A8D5B5;
+    --stone: #F8F6F0;
+    --ink: #111110;
+    --ink-mid: #555550;
+    --ink-muted: #8A8A84;
+    --border: rgba(0,0,0,0.09);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Instrument Sans', sans-serif; color: var(--ink); background: #fff; -webkit-font-smoothing: antialiased; }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%; height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--green); }
+  .nav-back { font-size: 14px; color: var(--ink-mid); text-decoration: none; display: flex; align-items: center; gap: 6px; }
+  .nav-back:hover { color: var(--ink); }
+
+  .hero {
+    background: var(--green);
+    padding: 64px 5% 56px;
+  }
+  .hero-label { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 12px; }
+  .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 4vw, 48px); color: #fff; letter-spacing: -0.5px; margin-bottom: 12px; }
+  .hero-date { font-size: 14px; color: rgba(255,255,255,0.55); }
+
+  .content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 5% 96px;
+  }
+
+  .content h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    color: var(--ink);
+    margin-top: 48px;
+    margin-bottom: 14px;
+  }
+
+  .content h2:first-child { margin-top: 0; }
+
+  .content p {
+    font-size: 15px;
+    color: var(--ink-mid);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+
+  .content ul {
+    margin: 0 0 14px 20px;
+  }
+
+  .content ul li {
+    font-size: 15px;
+    color: var(--ink-mid);
+    line-height: 1.8;
+    margin-bottom: 6px;
+  }
+
+  .content a { color: var(--green); text-decoration: none; }
+  .content a:hover { text-decoration: underline; }
+
+  .divider {
+    border: none;
+    border-top: 1px solid #EDEBE4;
+    margin: 40px 0;
+  }
+
+  .contact-box {
+    background: var(--stone);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-top: 48px;
+  }
+  .contact-box p { margin-bottom: 4px; }
+  .contact-box strong { color: var(--ink); font-weight: 600; }
+
+  footer {
+    background: #111;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding: 32px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: #fff; }
+  .footer-logo span { color: var(--green-light); }
+  .footer-links { display: flex; gap: 24px; list-style: none; }
+  .footer-links a { font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; }
+  .footer-links a:hover { color: rgba(255,255,255,0.7); }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="/">Hem<span>ly</span></a>
+  <a class="nav-back" href="/">← Tilbage til forsiden</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-label">Juridisk</div>
+  <h1>Privatlivspolitik</h1>
+  <div class="hero-date">Sidst opdateret: maj 2026</div>
+</div>
+
+<div class="content">
+
+  <h2>1. Introduktion</h2>
+  <p>Hos Hemly respekterer vi dit privatliv. Denne privatlivspolitik beskriver, hvilke oplysninger vi indsamler, hvordan vi bruger dem, og hvilke rettigheder du har i forbindelse med dine personoplysninger.</p>
+  <p>Hemly er en dansk boligvurderingsapp, der giver brugere mulighed for at søge på adresser og få prisestimater baseret på offentlige ejendomsdata.</p>
+
+  <hr class="divider">
+
+  <h2>2. Dataansvarlig</h2>
+  <p>Den dataansvarlige for behandling af dine personoplysninger er:</p>
+  <ul>
+    <li><strong>Virksomhed:</strong> Hemly</li>
+    <li><strong>E-mail:</strong> <a href="mailto:hej@hemly.dk">hej@hemly.dk</a></li>
+    <li><strong>Hjemmeside:</strong> <a href="https://hemly.dk">hemly.dk</a></li>
+  </ul>
+
+  <hr class="divider">
+
+  <h2>3. Hvilke oplysninger indsamler vi?</h2>
+  <p>Hemly indsamler et minimum af data for at levere vores tjeneste:</p>
+  <ul>
+    <li><strong>Søgehistorik:</strong> Adresser du har søgt på gemmes lokalt på din enhed (ikke på vores servere)</li>
+    <li><strong>Watchlist-data:</strong> Boliger du gemmer til din watchlist gemmes lokalt på din enhed</li>
+    <li><strong>Tekniske data:</strong> Vi kan modtage anonyme fejlrapporter og app-performance data via Expo/React Native</li>
+  </ul>
+  <p>Vi kræver <strong>ingen login eller registrering</strong> for at bruge appen. Vi indsamler ikke dit navn, e-mail eller andre personoplysninger medmindre du kontakter os direkte.</p>
+
+  <hr class="divider">
+
+  <h2>4. Hvordan bruger vi dine oplysninger?</h2>
+  <p>De begrænsede data vi behandler bruges udelukkende til:</p>
+  <ul>
+    <li>At levere og forbedre app-funktionaliteten</li>
+    <li>At fejlsøge tekniske problemer</li>
+    <li>At besvare henvendelser du sender os</li>
+  </ul>
+  <p>Vi sælger aldrig dine data til tredjeparter og bruger dem ikke til markedsføring.</p>
+
+  <hr class="divider">
+
+  <h2>5. Tredjeparts datatjenester</h2>
+  <p>Hemly benytter følgende eksterne tjenester som kan behandle data:</p>
+  <ul>
+    <li><strong>DAWA (Danmarks Adressers Web API):</strong> Bruges til adresseopslag. Data behandles af Styrelsen for Dataforsyning og Infrastruktur.</li>
+    <li><strong>Expo (React Native):</strong> Bruges til app-distribution og kan indsamle anonyme crash-rapporter.</li>
+    <li><strong>Apple App Store:</strong> Behandler data i forbindelse med download af appen.</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h2>6. Dine rettigheder</h2>
+  <p>Ifølge GDPR har du følgende rettigheder:</p>
+  <ul>
+    <li>Ret til indsigt i dine personoplysninger</li>
+    <li>Ret til berigtigelse af forkerte oplysninger</li>
+    <li>Ret til sletning ("retten til at blive glemt")</li>
+    <li>Ret til begrænsning af behandling</li>
+    <li>Ret til dataportabilitet</li>
+    <li>Ret til at gøre indsigelse mod behandling</li>
+  </ul>
+  <p>Da Hemly ikke kræver login og gemmer data lokalt på din enhed, kan du til enhver tid slette alle data ved at afinstallere appen.</p>
+
+  <hr class="divider">
+
+  <h2>7. Cookies og tracking</h2>
+  <p>Hemly-appen bruger ikke cookies. Vores hjemmeside (hemly.dk) bruger udelukkende teknisk nødvendige ressourcer (Google Fonts) og foretager ingen brugertracking.</p>
+
+  <hr class="divider">
+
+  <h2>8. Ændringer til denne politik</h2>
+  <p>Vi kan opdatere denne privatlivspolitik fra tid til anden. Væsentlige ændringer vil blive kommunikeret via appen. Den seneste version er altid tilgængelig på hemly.dk/privatlivspolitik.</p>
+
+  <div class="contact-box">
+    <p><strong>Spørgsmål om privatliv?</strong></p>
+    <p>Kontakt os på <a href="mailto:hej@hemly.dk">hej@hemly.dk</a> — vi svarer inden for 48 timer.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">Hem<span>ly</span></div>
+  <ul class="footer-links">
+    <li><a href="/privatlivspolitik.html">Privatlivspolitik</a></li>
+    <li><a href="/vilkaar.html">Vilkår for brug</a></li>
+    <li><a href="/kontakt.html">Kontakt</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Hemly</div>
+</footer>
+
+</body>
+</html>
