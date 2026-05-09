@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vilkår for bruk — Hemly, prisestimat på norske boliger</title>
+<meta name="description" content="Vilkår for bruk av Hemly — appen som gir et prisestimat på enhver norsk bolig på under 10 sekunder. Basert på offentlige eiendomsdata.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hemly.dk/no/vilkaar.html">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --green: #1C5C3E; --green-light: #A8D5B5; --stone: #F8F6F0; --ink: #111110; --ink-mid: #555550; --border: rgba(0,0,0,0.09); }
+  body { font-family: 'Instrument Sans', sans-serif; color: var(--ink); background: #fff; -webkit-font-smoothing: antialiased; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 5%; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--green); }
+  .nav-back { font-size: 14px; color: var(--ink-mid); text-decoration: none; }
+  .lang-switcher { display: flex; gap: 4px; }
+  .lang-btn { font-size: 18px; text-decoration: none; opacity: 0.4; padding: 2px 4px; }
+  .lang-btn.active { opacity: 1; }
+  .hero { background: var(--green); padding: 64px 5% 56px; }
+  .hero-label { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 12px; }
+  .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 4vw, 48px); color: #fff; letter-spacing: -0.5px; margin-bottom: 12px; }
+  .hero-date { font-size: 14px; color: rgba(255,255,255,0.55); }
+  .content { max-width: 720px; margin: 0 auto; padding: 64px 5% 96px; }
+  .content h2 { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--ink); margin-top: 48px; margin-bottom: 14px; }
+  .content h2:first-child { margin-top: 0; }
+  .content p { font-size: 15px; color: var(--ink-mid); line-height: 1.8; margin-bottom: 14px; }
+  .content ul { margin: 0 0 14px 20px; }
+  .content ul li { font-size: 15px; color: var(--ink-mid); line-height: 1.8; margin-bottom: 6px; }
+  .content a { color: var(--green); text-decoration: none; }
+  .divider { border: none; border-top: 1px solid #EDEBE4; margin: 40px 0; }
+  .highlight-box { background: #FFF8E7; border-left: 3px solid #F4C95D; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 24px 0; }
+  .contact-box { background: var(--stone); border-radius: 16px; padding: 28px 32px; margin-top: 48px; }
+  footer { background: #111; border-top: 1px solid rgba(255,255,255,0.07); padding: 32px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .footer-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: #fff; }
+  .footer-logo span { color: var(--green-light); }
+  .footer-links { display: flex; gap: 24px; list-style: none; }
+  .footer-links a { font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/no/">Hem<span>ly</span></a>
+  <div style="display:flex;align-items:center;gap:16px">
+    <a class="nav-back" href="/no/">← Tilbake til forsiden</a>
+    <div class="lang-switcher">
+      <a href="/vilkaar.html" class="lang-btn" title="Dansk">🇩🇰</a>
+      <a href="/no/vilkaar.html" class="lang-btn active" title="Norsk">🇳🇴</a>
+      <a href="/se/villkor.html" class="lang-btn" title="Svenska">🇸🇪</a>
+    </div>
+  </div>
+</nav>
+<div class="hero">
+  <div class="hero-label">Juridisk</div>
+  <h1>Vilkår for bruk</h1>
+  <div class="hero-date">Sist oppdatert: mai 2026</div>
+</div>
+<div class="content">
+  <h2>Om Hemly</h2>
+  <p>Hemly er en <strong>boligprisestimat-app</strong> til iPhone som gir alle muligheten til å besvare spørsmålet: <strong>hva er boligen egentlig verdt?</strong> Appen gir et øyeblikkelig <strong>prisestimat</strong> på enhver norsk adresse basert på offentlige <strong>eiendomsdata</strong> — uten innlogging og uten forpliktelse.</p>
+  <h2>1. Aksept av vilkår</h2>
+  <p>Ved å laste ned, installere eller bruke Hemly-appen eller besøke hemly.dk aksepterer du disse vilkårene.</p>
+  <hr class="divider">
+  <h2>2. Prisestimater og nøyaktighet</h2>
+  <div class="highlight-box">
+    <p><strong>Viktig:</strong> Prisestimater fra Hemly er veiledende og indikative. De er ikke offisielle eiendomsvurderinger og må ikke brukes som grunnlag for finansielle beslutninger, kjøp, salg eller belåning av eiendommer.</p>
+  </div>
+  <p>Faktiske omsetningspriser kan avvike vesentlig fra estimater. Hemly påtar seg intet ansvar for beslutninger tatt på bakgrunn av estimater.</p>
+  <hr class="divider">
+  <h2>3. Bruk av tjenesten</h2>
+  <p>Du kan bruke Hemly til personlige, ikke-kommersielle formål. Det er ikke tillatt å bruke appen til systematisk datainnsamling, videreselge data eller forsøke å få uautorisert tilgang til underliggende systemer.</p>
+  <hr class="divider">
+  <h2>4. Gjeldende rett</h2>
+  <p>Disse vilkårene er underlagt dansk rett. Eventuelle tvister avgjøres ved de danske domstolene.</p>
+  <div class="contact-box">
+    <p><strong>Spørsmål til vilkårene?</strong></p>
+    <p>Kontakt oss på <a href="mailto:hej@hemly.dk">hej@hemly.dk</a></p>
+  </div>
+</div>
+<footer>
+  <div class="footer-logo">Hem<span>ly</span></div>
+  <ul class="footer-links">
+    <li><a href="/no/personvern.html">Personvern</a></li>
+    <li><a href="/no/vilkaar.html">Vilkår</a></li>
+    <li><a href="/no/kontakt.html">Kontakt</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Hemly</div>
+</footer>
+</body>
+</html>
