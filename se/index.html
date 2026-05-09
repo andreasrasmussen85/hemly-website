@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hemly — Vad är bostaden egentligen värd? Prisestimat på 10 sekunder</title>
+<meta name="description" content="Slå upp en svensk adress och få ett prisestimat på under 10 sekunder — baserat på offentliga fastighetsdata. Vad är din bostad egentligen värd? Hemly kommer snart till Sverige.">
+<meta name="keywords" content="vad är bostaden värd, prisestimat bostad, bostadspris Sverige, fastighetspris, vad kostar grannens hus, bostadsprisestimat, fastighetsdata Sverige, bostadspris app">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hemly.dk/se/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root {
+  --forest: #1C5C3E; --forest-dark: #0d3d28; --forest-light: #2E8B57;
+  --forest-pale: #EAF4EE; --stone: #F7F5F0; --stone2: #EDE9E0;
+  --ink: #1a1a18; --ink2: #4a4a46; --ink3: #8a8a84;
+  --border: #E4E1D8; --white: #ffffff; --up: #1C5C3E; --down: #C0392B;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Instrument Sans', sans-serif; background: var(--stone); color: var(--ink); overflow-x: hidden; }
+.coming-banner { background: #FFF8E7; border-bottom: 1px solid #F4C95D; padding: 12px 60px; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 14px; color: #7a5c00; font-weight: 500; }
+.coming-banner strong { color: #5a4000; }
+nav { position: sticky; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 60px; display: flex; align-items: center; justify-content: space-between; background: rgba(247,245,240,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(228,225,216,0.6); }
+.nav-logo { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--ink); text-decoration: none; letter-spacing: -0.3px; }
+.nav-logo span { color: var(--forest); }
+.nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+.nav-links a { font-size: 14px; font-weight: 400; color: var(--ink2); text-decoration: none; transition: color .2s; }
+.nav-links a:hover { color: var(--forest); }
+.nav-cta { background: var(--forest); color: var(--white) !important; padding: 10px 22px; border-radius: 100px; font-weight: 500 !important; }
+.lang-switcher { display: flex; gap: 4px; align-items: center; margin-left: 16px; }
+.lang-btn { font-size: 18px; text-decoration: none; opacity: 0.4; transition: opacity .2s; border-radius: 4px; padding: 2px 4px; }
+.lang-btn:hover { opacity: 0.8; }
+.lang-btn.active { opacity: 1; }
+.hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 120px 60px 80px; gap: 80px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(28,92,62,0.08) 0%, transparent 70%); pointer-events: none; }
+.hero-left { max-width: 560px; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: var(--forest-pale); color: var(--forest); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 14px; border-radius: 100px; margin-bottom: 28px; }
+.hero-eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--forest); }
+.hero-h1 { font-family: 'DM Serif Display', serif; font-size: clamp(42px, 5vw, 68px); line-height: 1.05; letter-spacing: -1.5px; color: var(--ink); margin-bottom: 24px; }
+.hero-h1 em { font-style: italic; color: var(--forest); }
+.hero-sub { font-size: 17px; line-height: 1.65; color: var(--ink2); font-weight: 300; margin-bottom: 44px; max-width: 460px; }
+.hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--forest); color: var(--white); font-size: 15px; font-weight: 500; padding: 14px 28px; border-radius: 100px; text-decoration: none; transition: all .2s; }
+.btn-primary:hover { background: var(--forest-dark); transform: translateY(-1px); }
+.btn-secondary { display: inline-flex; align-items: center; gap: 8px; color: var(--ink2); font-size: 14px; text-decoration: none; }
+.hero-markets { display: flex; align-items: center; gap: 8px; margin-top: 32px; font-size: 13px; color: var(--ink3); }
+.phone-mockup { width: 280px; background: var(--white); border-radius: 36px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06), 0 24px 60px rgba(0,0,0,0.12); overflow: hidden; animation: float 6s ease-in-out infinite; }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+.phone-status { padding: 12px 16px 8px; display: flex; justify-content: space-between; font-size: 11px; font-weight: 500; }
+.phone-screen-header { background: var(--forest); padding: 16px 18px 18px; }
+.phone-addr { font-size: 10px; color: rgba(255,255,255,0.65); margin-bottom: 4px; }
+.phone-price { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--white); letter-spacing: -0.5px; line-height: 1; margin-bottom: 4px; }
+.phone-range { font-size: 10px; color: rgba(255,255,255,0.6); margin-bottom: 10px; }
+.phone-conf { background: rgba(255,255,255,0.15); border-radius: 100px; height: 4px; overflow: hidden; margin-bottom: 6px; }
+.phone-conf-fill { height: 100%; width: 82%; background: #5EDA9A; border-radius: 100px; }
+.phone-conf-row { display: flex; justify-content: space-between; font-size: 9px; color: rgba(255,255,255,0.7); }
+.phone-body { padding: 12px; background: var(--stone); }
+.phone-card { background: var(--white); border-radius: 12px; padding: 10px 12px; margin-bottom: 8px; border: 1px solid var(--border); }
+.phone-card-header { display: flex; justify-content: space-between; font-size: 10px; font-weight: 500; margin-bottom: 8px; }
+.phone-card-header span:last-child { color: var(--forest); }
+.phone-house-svg { display: flex; justify-content: center; margin-bottom: 8px; }
+.phone-slider { height: 20px; border-radius: 10px; background: linear-gradient(90deg, #F4C95D, #A8D5BA); position: relative; margin-bottom: 4px; }
+.phone-thumb { position: absolute; width: 20px; height: 20px; border-radius: 50%; background: white; border: 2px solid var(--forest); top: 0; }
+.phone-slider-labels { display: flex; justify-content: space-between; font-size: 9px; color: var(--ink3); }
+.phone-nav { display: flex; border-top: 1px solid var(--border); padding: 8px 0 10px; background: var(--white); }
+.pnav-item { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 8px; color: var(--ink3); }
+.pnav-item.on { color: var(--forest); }
+.phone-badge { position: absolute; right: -40px; top: 80px; background: var(--white); border-radius: 14px; padding: 10px 14px; box-shadow: 0 8px 24px rgba(0,0,0,0.10); border: 1px solid var(--border); font-size: 12px; white-space: nowrap; animation: float 6s ease-in-out infinite; animation-delay: -2s; }
+.phone-badge strong { color: var(--forest); display: block; font-size: 14px; font-family: 'DM Serif Display', serif; }
+.hero-right { display: flex; justify-content: center; align-items: center; position: relative; }
+.stats { background: var(--forest); padding: 32px 60px; display: flex; justify-content: center; gap: 80px; }
+.stat { text-align: center; }
+.stat-num { font-family: 'DM Serif Display', serif; font-size: 36px; color: var(--white); letter-spacing: -0.5px; }
+.stat-label { font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+.features { padding: 100px 60px; max-width: 1200px; margin: 0 auto; }
+.section-label { font-size: 11px; font-weight: 500; color: var(--forest); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
+.section-title { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 4vw, 48px); letter-spacing: -1px; line-height: 1.1; color: var(--ink); margin-bottom: 16px; }
+.section-sub { font-size: 16px; color: var(--ink2); font-weight: 300; line-height: 1.65; max-width: 480px; margin-bottom: 64px; }
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.feature-card { background: var(--white); border-radius: 20px; padding: 32px; border: 1px solid var(--border); transition: transform .2s; }
+.feature-card:hover { transform: translateY(-4px); }
+.feature-icon { width: 44px; height: 44px; background: var(--forest-pale); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.feature-title { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--ink); margin-bottom: 10px; }
+.feature-text { font-size: 14px; color: var(--ink2); line-height: 1.6; font-weight: 300; }
+.how { padding: 100px 60px; background: var(--white); }
+.how-inner { max-width: 1200px; margin: 0 auto; }
+.how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-top: 60px; }
+.steps { display: flex; flex-direction: column; gap: 32px; }
+.step { display: flex; gap: 20px; }
+.step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--forest); color: var(--white); font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+.step-title { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--ink); margin-bottom: 6px; }
+.step-text { font-size: 14px; color: var(--ink2); line-height: 1.6; font-weight: 300; }
+.wl-preview { background: var(--stone); border-radius: 24px; padding: 28px; border: 1px solid var(--border); }
+.wl-head { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--ink); margin-bottom: 6px; }
+.wl-sub { font-size: 13px; color: var(--ink3); margin-bottom: 20px; }
+.wl-notif { background: var(--forest-pale); border-radius: 10px; padding: 10px 14px; font-size: 13px; color: var(--forest); margin-bottom: 16px; display: flex; gap: 8px; }
+.wl-row { background: var(--white); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; display: flex; align-items: center; gap: 12px; border: 1px solid var(--border); }
+.wl-row:last-child { margin-bottom: 0; }
+.wl-ico { width: 38px; height: 38px; border-radius: 10px; background: var(--stone); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+.wl-info { flex: 1; }
+.wl-adr { font-size: 13px; font-weight: 500; }
+.wl-pr { font-size: 12px; color: var(--ink3); margin-top: 2px; }
+.wl-right { text-align: right; }
+.wl-up { font-size: 13px; font-weight: 500; color: var(--up); }
+.wl-dn { font-size: 13px; font-weight: 500; color: var(--down); }
+.wl-dt { font-size: 11px; color: var(--ink3); margin-top: 2px; }
+.spark { width: 60px; height: 24px; }
+.share-section { padding: 100px 60px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.share-card-preview { background: var(--forest); border-radius: 28px; padding: 40px; position: relative; overflow: hidden; }
+.share-card-preview::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.05); }
+.sc-brand { font-family: 'DM Serif Display', serif; font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 20px; }
+.sc-brand span { color: rgba(255,255,255,0.8); }
+.sc-addr { font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 10px; }
+.sc-price { font-family: 'DM Serif Display', serif; font-size: 48px; color: var(--white); letter-spacing: -1px; line-height: 1; margin-bottom: 8px; }
+.sc-range { font-size: 13px; color: rgba(255,255,255,0.5); }
+.sc-divider { border: none; border-top: 1px solid rgba(255,255,255,0.15); margin: 24px 0; }
+.sc-question { font-size: 20px; color: var(--white); text-align: center; }
+.sc-hidden { display: flex; align-items: center; justify-content: center; gap: 10px; background: rgba(255,255,255,0.1); border-radius: 10px; padding: 12px; margin-top: 16px; font-size: 13px; color: rgba(255,255,255,0.6); }
+.seo-section { background: var(--white); padding: 72px 60px; }
+.seo-inner { max-width: 860px; margin: 0 auto; }
+.cta-section { background: var(--forest); padding: 100px 60px; text-align: center; position: relative; overflow: hidden; }
+.cta-h2 { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 5vw, 56px); color: var(--white); letter-spacing: -1px; line-height: 1.1; margin-bottom: 20px; }
+.cta-sub { font-size: 16px; color: rgba(255,255,255,0.65); font-weight: 300; margin-bottom: 44px; max-width: 440px; margin-left: auto; margin-right: auto; line-height: 1.65; }
+.notify-form { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; max-width: 440px; margin: 0 auto; }
+.notify-input { flex: 1; min-width: 200px; padding: 14px 20px; border-radius: 100px; border: none; font-size: 15px; font-family: 'Instrument Sans', sans-serif; outline: none; }
+.notify-btn { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 14px 24px; border-radius: 100px; font-size: 14px; font-weight: 500; cursor: pointer; white-space: nowrap; }
+footer { padding: 48px 60px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+.footer-logo { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--ink); }
+.footer-logo span { color: var(--forest); }
+.footer-copy { font-size: 13px; color: var(--ink3); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-size: 13px; color: var(--ink3); text-decoration: none; }
+.fade-in { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+@media(max-width:900px){
+  .coming-banner{padding:12px 24px;font-size:13px}
+  nav{padding:16px 24px} .nav-links{display:none}
+  .hero{grid-template-columns:1fr;padding:100px 24px 60px;gap:40px} .hero-right{order:-1} .phone-badge{display:none}
+  .stats{padding:32px 24px;gap:40px;flex-wrap:wrap}
+  .features{padding:60px 24px} .features-grid{grid-template-columns:1fr}
+  .how{padding:60px 24px} .how-grid{grid-template-columns:1fr;gap:40px}
+  .share-section{grid-template-columns:1fr;padding:60px 24px}
+  .cta-section{padding:60px 24px} .seo-section{padding:60px 24px}
+  footer{flex-direction:column;gap:16px;text-align:center;padding:32px 24px}
+}
+</style>
+</head>
+<body>
+
+<div class="coming-banner">
+  🇸🇪 <strong>Hemly kommer snart till Sverige</strong> — anmäl dig för att få besked när appen är redo
+</div>
+
+<nav>
+  <a href="/se/" class="nav-logo">Hem<span>ly</span></a>
+  <ul class="nav-links">
+    <li><a href="#features">Funktioner</a></li>
+    <li><a href="#hvordan">Så här fungerar det</a></li>
+    <li><a href="#del">Dela-funktionen</a></li>
+    <li><a href="#download" class="nav-cta">Anmäl intresse</a></li>
+  </ul>
+  <div class="lang-switcher">
+    <a href="/" class="lang-btn" title="Dansk">🇩🇰</a>
+    <a href="/no/" class="lang-btn" title="Norsk">🇳🇴</a>
+    <a href="/se/" class="lang-btn active" title="Svenska">🇸🇪</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Svensk bostadsprisestimat — snart</div>
+    <h1 class="hero-h1">Vad är bostaden <em>egentligen</em> värd?</h1>
+    <p class="hero-sub">Hemly kommer snart till Sverige. Slå upp en svensk adress och få ett prisestimat på under 10 sekunder — baserat på offentliga fastighetsdata. Ingen mäklare, inget åtagande.</p>
+    <div class="hero-actions">
+      <a href="#download" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        Anmäl intresse
+      </a>
+      <a href="#hvordan" class="btn-secondary">
+        Se hur det fungerar
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero-markets">
+      <span>🇩🇰 🇳🇴 🇸🇪</span>
+      <span>Fungerar i Danmark, Norge och snart Sverige</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="phone-mockup">
+      <div class="phone-status"><span>9:41</span><span>●●●</span></div>
+      <div class="phone-screen-header">
+        <div class="phone-addr">Strandvägen 12, Stockholm</div>
+        <div class="phone-price">kr. 6.850.000</div>
+        <div class="phone-range">Spann 6,4 – 7,3 mkr</div>
+        <div class="phone-conf"><div class="phone-conf-fill"></div></div>
+        <div class="phone-conf-row"><span>Träffsäkerhet</span><span>82%</span></div>
+      </div>
+      <div class="phone-body">
+        <div class="phone-card">
+          <div class="phone-card-header"><span>Utvändigt skick</span><span>Bra</span></div>
+          <div class="phone-house-svg">
+            <svg width="120" height="60" viewBox="0 0 160 90" fill="none">
+              <circle cx="128" cy="16" r="8" fill="#F4C95D"/>
+              <line x1="40" y1="80" x2="110" y2="80" stroke="#4a8a3a" stroke-width="1"/>
+              <path d="M48 55 L80 32 L112 55" stroke="#3a6f48" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+              <rect x="54" y="55" width="52" height="25" stroke="#3a6f48" stroke-width="1.3" fill="none"/>
+              <rect x="72" y="66" width="10" height="14" stroke="#3a6f48" stroke-width="1.1" fill="none"/>
+            </svg>
+          </div>
+          <div class="phone-slider"><div class="phone-thumb" style="left:calc(72% - 10px)"></div></div>
+          <div class="phone-slider-labels"><span>Dåligt</span><span>Utmärkt</span></div>
+        </div>
+        <div class="phone-card" style="background:#fdfaf2">
+          <div class="phone-card-header"><span>Invändigt skick</span><span>Medel</span></div>
+          <div class="phone-house-svg">
+            <svg width="120" height="60" viewBox="0 0 160 90" fill="none">
+              <path d="M20 85 V40 L80 14 L140 40 V85 Z" stroke="#3a6f48" stroke-width="1.4" fill="none"/>
+              <rect x="30" y="68" width="54" height="18" rx="2" stroke="#3a6f48" stroke-width="1.3" fill="none"/>
+            </svg>
+          </div>
+          <div class="phone-slider"><div class="phone-thumb" style="left:calc(48% - 10px)"></div></div>
+          <div class="phone-slider-labels"><span>Dåligt</span><span>Utmärkt</span></div>
+        </div>
+      </div>
+      <div class="phone-nav">
+        <div class="pnav-item"><svg width="14" height="14" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9.5" cy="9.5" r="5.5"/><path d="M14 14l3.5 3.5" stroke-linecap="round"/></svg>Sök</div>
+        <div class="pnav-item on"><svg width="14" height="14" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9L11 3l8 6v9a1 1 0 01-1 1H4a1 1 0 01-1-1V9z" stroke-linejoin="round"/></svg>Värdering</div>
+        <div class="pnav-item"><svg width="14" height="14" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3v16l6-3.5L17 19V3z" stroke-linejoin="round"/></svg>Watchlist</div>
+      </div>
+    </div>
+    <div class="phone-badge"><strong>82%</strong>träffsäkerhet</div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">10 sek</div><div class="stat-label">till ett estimat</div></div>
+  <div class="stat"><div class="stat-num">3 länder</div><div class="stat-label">Danmark, Norge, Sverige</div></div>
+  <div class="stat"><div class="stat-num">100%</div><div class="stat-label">offentliga data</div></div>
+  <div class="stat"><div class="stat-num">Gratis</div><div class="stat-label">inget abonnemang</div></div>
+</div>
+
+<section class="features fade-in" id="features">
+  <div class="section-label">Funktioner</div>
+  <h2 class="section-title">Allt du behöver<br>veta om en bostad</h2>
+  <p class="section-sub">Hemly samlar de viktigaste offentliga fastighetsdata och presenterar dem på ett sätt alla kan förstå.</p>
+  <div class="features-grid">
+    <div class="feature-card fade-in">
+      <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1C5C3E" stroke-width="1.6"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <div class="feature-title">Följ prisutvecklingen</div>
+      <p class="feature-text">Lägg till bostäder i din watchlist och följ prisutvecklingen över tid — med visuella sparkline-grafer.</p>
+    </div>
+    <div class="feature-card fade-in">
+      <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1C5C3E" stroke-width="1.6"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke-linecap="round"/></svg></div>
+      <div class="feature-title">Dela som gissningslek</div>
+      <p class="feature-text">Skicka en bostad till dina vänner — priset är dolt tills de öppnar appen. Den sociala mekanismen som skapar samtal.</p>
+    </div>
+    <div class="feature-card fade-in">
+      <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1C5C3E" stroke-width="1.6"><path d="M3 11l9-7 9 7v9a1 1 0 01-1 1H4a1 1 0 01-1-1V11z" stroke-linejoin="round"/></svg></div>
+      <div class="feature-title">Justera skicket</div>
+      <p class="feature-text">Justera estimatet baserat på bostadens utvändiga och invändiga skick med intuitiva reglage — och se priset uppdateras live.</p>
+    </div>
+    <div class="feature-card fade-in">
+      <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1C5C3E" stroke-width="1.6"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+      <div class="feature-title">Officiella data</div>
+      <p class="feature-text">Alla estimat baseras på de bästa offentliga svenska fastighetsdata — inte gissningar eller algoritmer utan grund.</p>
+    </div>
+    <div class="feature-card fade-in">
+      <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1C5C3E" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="feature-title">Hela Norden</div>
+      <p class="feature-text">Fungerar i Danmark, Norge och snart Sverige. Appen identifierar automatiskt landet utifrån adressen du söker på.</p>
+    </div>
+    <div class="feature-card fade-in">
+      <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1C5C3E" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+      <div class="feature-title">Fastighetsdata samlat</div>
+      <p class="feature-text">Se bostadstyp, area, byggnadsår, senaste försäljningspris och energimärkning samlat på ett ställe.</p>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="hvordan">
+  <div class="how-inner">
+    <div class="section-label">Så här fungerar det</div>
+    <h2 class="section-title">Från adress till estimat<br>i 3 steg</h2>
+    <div class="how-grid">
+      <div class="steps">
+        <div class="step fade-in"><div class="step-num">1</div><div><div class="step-title">Sök en adress</div><p class="step-text">Skriv adressen i sökfältet — Hemly autocompletterar med alla svenska adresser via det officiella adressregistret.</p></div></div>
+        <div class="step fade-in"><div class="step-num">2</div><div><div class="step-title">Justera skicket</div><p class="step-text">Dra reglagen för utvändigt och invändigt skick. Se prisestimatet uppdateras live medan du justerar.</p></div></div>
+        <div class="step fade-in"><div class="step-num">3</div><div><div class="step-title">Spara eller dela</div><p class="step-text">Lägg till bostaden i din watchlist och följ prisutvecklingen — eller skicka gissningsleken till dina vänner.</p></div></div>
+      </div>
+      <div class="wl-preview fade-in">
+        <div class="wl-head">Watchlist</div>
+        <div class="wl-sub">4 bostäder du följer</div>
+        <div class="wl-notif">🔔 <span><strong>Strandvägen 12</strong> har fått nytt pris sedan ditt besök</span></div>
+        <div class="wl-row"><div class="wl-ico">🏠</div><div class="wl-info"><div class="wl-adr">Strandvägen 12, Stockholm</div><div class="wl-pr">kr. 6.850.000</div></div><svg class="spark" viewBox="0 0 60 24"><polyline points="0,22 12,17 24,19 36,11 48,9 60,5" fill="none" stroke="#1C5C3E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="wl-right"><div class="wl-up">+2,3%</div><div class="wl-dt">sedan jan</div></div></div>
+        <div class="wl-row"><div class="wl-ico">🏡</div><div class="wl-info"><div class="wl-adr">Avenyn 42, Göteborg</div><div class="wl-pr">kr. 3.480.000</div></div><svg class="spark" viewBox="0 0 60 24"><polyline points="0,6 12,9 24,7 36,12 48,16 60,20" fill="none" stroke="#C0392B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="wl-right"><div class="wl-dn">-1,4%</div><div class="wl-dt">sedan feb</div></div></div>
+        <div class="wl-row"><div class="wl-ico">🏘</div><div class="wl-info"><div class="wl-adr">Lilla Torg 3, Malmö</div><div class="wl-pr">kr. 2.920.000</div></div><svg class="spark" viewBox="0 0 60 24"><polyline points="0,20 12,17 24,15 36,16 48,12 60,8" fill="none" stroke="#1C5C3E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="wl-right"><div class="wl-up">+0,8%</div><div class="wl-dt">sedan mar</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="share-section fade-in" id="del">
+  <div class="share-card-preview">
+    <div class="sc-brand">Hem<span>ly</span></div>
+    <div class="sc-addr">Kungsgatan 18, Stockholm</div>
+    <div class="sc-price">~5,2 mkr</div>
+    <div class="sc-range">Spann 4,9 – 5,6 mkr</div>
+    <hr class="sc-divider">
+    <div class="sc-question">Vad gissar du? 🤔</div>
+    <div class="sc-hidden">🔒 Priset är dolt för mottagaren</div>
+  </div>
+  <div>
+    <div class="section-label">Dela-funktionen</div>
+    <h2 class="section-title">Gissningsleken som<br>skapar samtal</h2>
+    <p class="section-sub">Skicka en bostad till dina vänner med ett enda tryck. Priset är dolt — de måste gissa innan de ser svaret. Det är funktionen som startar diskussionen vid middagsbordet.</p>
+    <a href="#download" class="btn-primary" style="display:inline-flex">Anmäl intresse <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</section>
+
+<div class="seo-section">
+  <div class="seo-inner">
+    <div class="section-label">Vad är Hemly?</div>
+    <h2 class="section-title" style="font-size:clamp(28px,3.5vw,40px);margin-bottom:20px">Prisestimatet som svarar på frågan alla ställer</h2>
+    <p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:14px">Har du någonsin gått förbi en bostad och tänkt: <em>vad kostar den egentligen?</em> Med Hemly får du svaret på sekunder. Sök upp en svensk adress och få ett <strong>prisestimat</strong> baserat på offentliga fastighetsdata — ingen mäklare, ingen väntetid.</p>
+    <p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:14px">Med <strong>watchlist-funktionen</strong> kan du följa <strong>bostadsprisutvecklingen</strong> på bostäder du är nyfiken på — som att följa en aktie. Villa, radhus eller lägenhet — alla svenska adresser täcks.</p>
+  </div>
+</div>
+
+<section class="cta-section" id="download">
+  <h2 class="cta-h2">Hemly kommer snart till Sverige</h2>
+  <p class="cta-sub">Anmäl ditt intresse så meddelar vi dig när appen är redo för Sverige. Appen finns redan i Danmark och Norge.</p>
+  <div class="notify-form">
+    <input class="notify-input" type="email" placeholder="din@email.se">
+    <button class="notify-btn" onclick="alert('Tack! Vi hör av oss när Hemly lanseras i Sverige.')">Meddela mig</button>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Hem<span>ly</span></div>
+  <div class="footer-copy">© 2026 Hemly. Alla rättigheter förbehållna.</div>
+  <div class="footer-links">
+    <a href="/se/integritetspolicy.html">Integritetspolicy</a>
+    <a href="/se/villkor.html">Villkor</a>
+    <a href="/se/kontakt.html">Kontakt</a>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 80);
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
