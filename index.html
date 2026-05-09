@@ -800,6 +800,10 @@ footer {
   .cta-section{padding:60px 24px}
   footer{flex-direction:column;gap:16px;text-align:center;padding:32px 24px}
 }
+.lang-switcher { display: flex; gap: 4px; align-items: center; margin-left: 8px; }
+.lang-btn { font-size: 18px; text-decoration: none; opacity: 0.4; transition: opacity .2s; border-radius: 4px; padding: 2px 4px; }
+.lang-btn:hover { opacity: 0.8; }
+.lang-btn.active { opacity: 1; }
 </style>
 </head>
 <body>
@@ -813,6 +817,11 @@ footer {
     <li><a href="#del">Del-funktionen</a></li>
     <li><a href="#download" class="nav-cta">Download appen</a></li>
   </ul>
+  <div class="lang-switcher">
+    <a href="/" class="lang-btn active" title="Dansk">🇩🇰</a>
+    <a href="/no/" class="lang-btn" title="Norsk">🇳🇴</a>
+    <a href="/se/" class="lang-btn" title="Svenska">🇸🇪</a>
+  </div>
 </nav>
 
 <!-- HERO -->
