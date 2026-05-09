@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Integritetspolicy — Hemly, prisestimat på svenska bostäder</title>
+<meta name="description" content="Hemlys integritetspolicy. Hemly ger ett prisestimat på svenska bostäder på under 10 sekunder — vi samlar minimal data och kräver ingen inloggning.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hemly.dk/se/integritetspolicy.html">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--green:#1C5C3E;--green-light:#A8D5B5;--stone:#F8F6F0;--ink:#111110;--ink-mid:#555550;--border:rgba(0,0,0,0.09)}
+  body{font-family:'Instrument Sans',sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+  nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 5%;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);text-decoration:none}
+  .logo span{color:var(--green)}
+  .nav-back{font-size:14px;color:var(--ink-mid);text-decoration:none}
+  .lang-switcher{display:flex;gap:4px}
+  .lang-btn{font-size:18px;text-decoration:none;opacity:0.4;padding:2px 4px}
+  .lang-btn.active{opacity:1}
+  .hero{background:var(--green);padding:64px 5% 56px}
+  .hero-label{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:12px}
+  .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,48px);color:#fff;letter-spacing:-0.5px;margin-bottom:12px}
+  .hero-date{font-size:14px;color:rgba(255,255,255,0.55)}
+  .content{max-width:720px;margin:0 auto;padding:64px 5% 96px}
+  .content h2{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin-top:48px;margin-bottom:14px}
+  .content h2:first-child{margin-top:0}
+  .content p{font-size:15px;color:var(--ink-mid);line-height:1.8;margin-bottom:14px}
+  .content ul{margin:0 0 14px 20px}
+  .content ul li{font-size:15px;color:var(--ink-mid);line-height:1.8;margin-bottom:6px}
+  .content a{color:var(--green);text-decoration:none}
+  .divider{border:none;border-top:1px solid #EDEBE4;margin:40px 0}
+  .contact-box{background:var(--stone);border-radius:16px;padding:28px 32px;margin-top:48px}
+  footer{background:#111;border-top:1px solid rgba(255,255,255,0.07);padding:32px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+  .footer-logo{font-family:'DM Serif Display',serif;font-size:20px;color:#fff}
+  .footer-logo span{color:var(--green-light)}
+  .footer-links{display:flex;gap:24px;list-style:none}
+  .footer-links a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none}
+  .footer-copy{font-size:12px;color:rgba(255,255,255,0.25)}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/se/">Hem<span>ly</span></a>
+  <div style="display:flex;align-items:center;gap:16px">
+    <a class="nav-back" href="/se/">← Tillbaka till startsidan</a>
+    <div class="lang-switcher">
+      <a href="/privatlivspolitik.html" class="lang-btn" title="Dansk">🇩🇰</a>
+      <a href="/no/personvern.html" class="lang-btn" title="Norsk">🇳🇴</a>
+      <a href="/se/integritetspolicy.html" class="lang-btn active" title="Svenska">🇸🇪</a>
+    </div>
+  </div>
+</nav>
+<div class="hero">
+  <div class="hero-label">Juridiskt</div>
+  <h1>Integritetspolicy</h1>
+  <div class="hero-date">Senast uppdaterad: maj 2026</div>
+</div>
+<div class="content">
+  <h2>Om Hemly och dina data</h2>
+  <p>Hemly är en <strong>bostadsprisestimat-app</strong> till iPhone. Vi ger alla möjlighet att slå upp en adress och få ett <strong>prisestimat på en bostad</strong> — utan inloggning och utan att lämna personuppgifter. Vårt mål är att svara på frågan <strong>"vad är bostaden egentligen värd?"</strong> på det mest integritetsvänliga sättet möjligt.</p>
+  <h2>1. Introduktion</h2>
+  <p>På Hemly respekterar vi din integritet. Denna policy beskriver vilka uppgifter vi samlar in, hur vi använder dem och vilka rättigheter du har.</p>
+  <hr class="divider">
+  <h2>2. Personuppgiftsansvarig</h2>
+  <ul>
+    <li><strong>Företag:</strong> Hemly</li>
+    <li><strong>E-post:</strong> <a href="mailto:hej@hemly.dk">hej@hemly.dk</a></li>
+    <li><strong>Webbplats:</strong> <a href="https://hemly.dk">hemly.dk</a></li>
+  </ul>
+  <hr class="divider">
+  <h2>3. Vilka uppgifter samlar vi in?</h2>
+  <p>Hemly samlar in ett minimum av data:</p>
+  <ul>
+    <li><strong>Sökhistorik:</strong> Adresser du sökt på sparas lokalt på din enhet (inte på våra servrar)</li>
+    <li><strong>Watchlist-data:</strong> Bostäder du sparar till watchlisten sparas lokalt på din enhet</li>
+    <li><strong>Tekniska data:</strong> Vi kan ta emot anonyma felrapporter via Expo/React Native</li>
+  </ul>
+  <p>Vi kräver <strong>ingen inloggning eller registrering</strong> för att använda appen.</p>
+  <hr class="divider">
+  <h2>4. Dina rättigheter</h2>
+  <p>Enligt GDPR har du rätt till tillgång, rättelse, radering, begränsning och dataportabilitet. Eftersom Hemly inte kräver inloggning och sparar data lokalt kan du radera alla data genom att avinstallera appen.</p>
+  <hr class="divider">
+  <h2>5. Cookies</h2>
+  <p>Hemly-appen använder inte cookies. Vår webbplats använder endast tekniskt nödvändiga resurser (Google Fonts) och utför ingen användningsspårning.</p>
+  <div class="contact-box">
+    <p><strong>Frågor om integritet?</strong></p>
+    <p>Kontakta oss på <a href="mailto:hej@hemly.dk">hej@hemly.dk</a> — vi svarar inom 48 timmar.</p>
+  </div>
+</div>
+<footer>
+  <div class="footer-logo">Hem<span>ly</span></div>
+  <ul class="footer-links">
+    <li><a href="/se/integritetspolicy.html">Integritetspolicy</a></li>
+    <li><a href="/se/villkor.html">Villkor</a></li>
+    <li><a href="/se/kontakt.html">Kontakt</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Hemly</div>
+</footer>
+</body>
+</html>
