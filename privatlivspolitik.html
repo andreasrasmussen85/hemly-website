@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privatlivspolitik — Hemly, prisestimat på enhver dansk bolig</title>
-<meta name="description" content="Hemlys privatlivspolitik. Hemly giver et prisestimat på enhver dansk bolig på under 10 sekunder — baseret på offentlige ejendomsdata. Vi indsamler minimal data og kræver ingen login.">
+<title>Privatlivspolitik – Hemly</title>
+<meta name="description" content="Hemlys privatlivspolitik: hvilke oplysninger appen og hemly.dk behandler, hvilke tredjepartstjenester der bruges, og hvilke rettigheder du har.">
 <meta name="keywords" content="Hemly privatlivspolitik, boligpris app GDPR, prisestimat bolig data, ejendomsdata app privatliv">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hemly.dk/privatlivspolitik.html">
-<meta property="og:title" content="Privatlivspolitik — Hemly">
-<meta property="og:description" content="Hemly giver et prisestimat på enhver dansk bolig på under 10 sekunder. Læs hvordan vi håndterer dine data.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<meta property="og:title" content="Privatlivspolitik – Hemly">
+<meta property="og:description" content="Læs hvordan Hemly-appen og hemly.dk håndterer dine oplysninger.">
 <meta property="og:url" content="https://hemly.dk/privatlivspolitik.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,7 +118,6 @@
   .footer-links a { font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; }
   .footer-links a:hover { color: rgba(255,255,255,0.7); }
   .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
-.lang-switcher{display:flex;gap:4px;align-items:center}.lang-btn{font-size:18px;text-decoration:none;opacity:0.4;padding:2px 4px;border-radius:4px;transition:opacity .2s}.lang-btn:hover{opacity:0.8}.lang-btn.active{opacity:1}
 </style>
 </head>
 <body>
@@ -125,11 +125,6 @@
 <nav>
   <a class="logo" href="/">Hem<span>ly</span></a>
   <a class="nav-back" href="/">← Tilbage til forsiden</a>
-  <div class="lang-switcher">
-    <a href="/privatlivspolitik.html" class="lang-btn active" title="Dansk">🇩🇰</a>
-    <a href="/no/personvern.html" class="lang-btn" title="Norsk">🇳🇴</a>
-    <a href="/se/integritetspolicy.html" class="lang-btn" title="Svenska">🇸🇪</a>
-  </div>
 </nav>
 
 <div class="hero">
@@ -147,21 +142,16 @@
   <hr class="divider">
 
   <h2>2. Dataansvarlig</h2>
-  <p>Den dataansvarlige for behandling af dine personoplysninger er:</p>
-  <ul>
-    <li><strong>Virksomhed:</strong> Hemly</li>
-    <li><strong>E-mail:</strong> <a href="mailto:hej@hemly.dk">hej@hemly.dk</a></li>
-    <li><strong>Hjemmeside:</strong> <a href="https://hemly.dk">hemly.dk</a></li>
-  </ul>
+  <p>Dataansvarlig: <strong>Andreas Rasmussen (Hemly)</strong><br>Kontakt: <a href="mailto:hej@hemly.dk">hej@hemly.dk</a></p>
 
   <hr class="divider">
 
   <h2>3. Hvilke oplysninger indsamler vi?</h2>
   <p>Hemly indsamler et minimum af data for at levere vores tjeneste:</p>
   <ul>
-    <li><strong>Søgehistorik:</strong> Adresser du har søgt på gemmes lokalt på din enhed (ikke på vores servere)</li>
-    <li><strong>Watchlist-data:</strong> Boliger du gemmer til din watchlist gemmes lokalt på din enhed</li>
-   <li><strong>Ingen tekniske data:</strong> Vi indsamler ingen anvendelses-, analyse- eller fejlrapporteringsdata. Appen indeholder ingen analyse- eller sporingsværktøjer.</li>
+    <li><strong>Søgehistorik og gemte boliger:</strong> Adresser, du har søgt på, og boliger, du gemmer, gemmes lokalt på din enhed – ikke i en konto hos os.</li>
+    <li><strong>Opslag:</strong> Når du skriver en adresse, sendes teksten til den offentlige adressetjeneste DAWA (Danmarks Adressers Web API) for at finde adresseforslag. <strong>Eksisterende appversioner</strong> sender desuden den indtastede tekst til Kartverkets offentlige adressetjeneste i Norge (ws.geonorge.no) som led i adressesøgningen. Det er en teknisk databehandling og ikke udtryk for, at Hemly dækker norske boliger. En kommende Danmark-only-version af appen vil kun bruge DAWA, men allerede installerede versioner fortsætter med at sende forespørgslen, indtil de er opdateret. Når du åbner en bolig, sendes boligens adresse-id og BFE-nummer til Hemlys egen server, som henter offentlige ejendomsdata fra Datafordeleren (BBR og Ejerfortegnelsen), og appen henter prisniveauer fra Danmarks Statistik. Din IP-adresse indgår teknisk i disse forespørgsler.</li>
+    <li><strong>Ingen brugsanalyse eller fejlrapportering:</strong> Appen indeholder ingen analyse-, sporings- eller crash-rapporteringsværktøjer, og vi indsamler ingen anvendelsesdata.</li>
   </ul>
   <p>Vi kræver <strong>ingen login eller registrering</strong> for at bruge appen. Vi indsamler ikke dit navn, e-mail eller andre personoplysninger medmindre du kontakter os direkte.</p>
 
@@ -178,12 +168,16 @@
   <hr class="divider">
 
   <h2>5. Tredjeparts datatjenester</h2>
-  <p>Hemly benytter følgende eksterne tjenester som kan behandle data:</p>
+  <p>Hemly benytter følgende eksterne tjenester, som kan behandle data:</p>
   <ul>
-    <li><strong>DAWA (Danmarks Adressers Web API):</strong> Bruges til adresseopslag. Data behandles af Styrelsen for Dataforsyning og Infrastruktur.</li>
-    <li><strong>Expo (React Native):</strong> Bruges til at bygge og distribuere appen. Vi har ikke aktiveret analyse- eller crash-rapportering.</li>
+    <li><strong>DAWA (Danmarks Adressers Web API):</strong> Adresseforslag ud fra den tekst, du skriver. Drives af Styrelsen for Dataforsyning og Infrastruktur.</li>
+    <li><strong>Kartverket (Norge):</strong> Modtager i eksisterende appversioner den indtastede adressetekst via den offentlige adressetjeneste ws.geonorge.no. Bruges ikke i en kommende Danmark-only-version; allerede installerede versioner kan dog fortsat sende forespørgslen, indtil de er opdateret.</li>
+    <li><strong>Datafordeleren:</strong> Offentlige ejendomsdata (BBR og Ejerfortegnelsen). Hentes af Hemlys egen server – din enhed kontakter ikke Datafordeleren direkte.</li>
+    <li><strong>Danmarks Statistik:</strong> Offentlige prisniveauer for postnummer og boligtype. Hentes fra din enhed; der sendes ingen adresse eller personoplysninger.</li>
+    <li><strong>Expo:</strong> Bruges til at bygge og distribuere appen. Ved opstart kontakter appen Expos opdateringstjeneste for at tjekke efter opdateringer. Vi har ikke aktiveret analyse- eller crash-rapportering.</li>
     <li><strong>Apple App Store:</strong> Behandler data i forbindelse med download af appen.</li>
   </ul>
+  <p><strong>Serverlogs:</strong> Hemlys server (api.hemly.dk) og hjemmesiden fører tekniske adgangslogs med IP-adresse, tidspunkt, den forespurgte side eller adresse-id og app-/browsertype. Adgangslogs roteres dagligt og opbevares i op til ca. 14 dage. Derudover føres tekniske fejllogs. Logs bruges kun til drift og fejlsøgning.</p>
 
   <hr class="divider">
 
@@ -197,12 +191,12 @@
     <li>Ret til dataportabilitet</li>
     <li>Ret til at gøre indsigelse mod behandling</li>
   </ul>
-  <p>Da Hemly ikke kræver login og gemmer data lokalt på din enhed, kan du til enhver tid slette alle data ved at afinstallere appen.</p>
+  <p>Da Hemly ikke kræver login og gemmer dine søgninger og gemte boliger lokalt på din enhed, sletter du disse data ved at afinstallere appen. Tekniske serverlogs slettes automatisk efter opbevaringsperioden.</p>
 
   <hr class="divider">
 
   <h2>7. Cookies og tracking</h2>
-  <p>Hemly-appen bruger ikke cookies. Vores hjemmeside (hemly.dk) bruger udelukkende teknisk nødvendige ressourcer (Google Fonts) og foretager ingen brugertracking.</p>
+  <p>Hemly-appen bruger ikke cookies. Vores hjemmeside (hemly.dk) sætter ingen cookies, indlæser skrifttyper fra Google Fonts (Google modtager din IP-adresse ved indlæsning) og foretager ingen brugertracking.</p>
 
   <hr class="divider">
 

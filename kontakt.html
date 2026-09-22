@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kontakt Hemly — Spørgsmål om prisestimat på din bolig?</title>
-<meta name="description" content="Kontakt Hemly — appen der giver et prisestimat på enhver dansk bolig på under 10 sekunder. Spørgsmål om boligpris, ejendomsdata eller appen? Vi svarer inden for 48 timer.">
+<title>Kontakt Hemly – spørgsmål om appen og prisestimater</title>
+<meta name="description" content="Kontakt Hemly på hej@hemly.dk med spørgsmål om appen, vejledende prisestimater eller boligoplysninger. Hemly er en gratis iPhone-app til danske boliger.">
 <meta name="keywords" content="kontakt Hemly, prisestimat bolig spørgsmål, boligpris app hjælp, hvad er boligen værd app, ejendomsdata spørgsmål, boligprisestimat Danmark">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hemly.dk/kontakt.html">
+<link rel="icon" type="image/png" href="/favicon.png">
 <meta property="og:title" content="Kontakt Hemly">
-<meta property="og:description" content="Spørgsmål om Hemly? Vi hjælper dig med alt om prisestimater og boligpriser i Danmark.">
+<meta property="og:description" content="Spørgsmål om Hemly-appen, vejledende prisestimater eller boligoplysninger? Skriv til hej@hemly.dk.">
 <meta property="og:url" content="https://hemly.dk/kontakt.html">
 <script type="application/ld+json">
 {
@@ -18,23 +19,43 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "Hvad er boligen egentlig værd — hvordan finder jeg ud af det?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Med Hemly søger du en dansk adresse og får et vejledende prisestimat med et prisinterval — baseret på offentlige ejendomsdata. Du kan valgfrit justere for boligens stand og se dit eget scenarie ved siden af grundestimatet. Ingen mægler, ingen forpligtelse." }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvad koster naboens hus — kan jeg se det i Hemly?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Søg en dansk adresse og få et vejledende prisestimat, når boligen kan vurderes. Appen viser også seneste registrerede handel, når oplysningen findes." }
+    },
+    {
+      "@type": "Question",
       "name": "Hvordan beregner Hemly prisestimater?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Hemly kombinerer offentlige ejendomsdata med markedsbaserede modeller for at give et indikativt prisestimat. Estimatet justeres baseret på boligens stand, størrelse, beliggenhed og byggeår." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Hemly beregner et grundestimat ud fra offentlige ejendomsdata og – hvor de findes – registrerede handler i området. Estimatet vises med et prisinterval. Estimatet er vejledende. Usikkerheden afhænger blandt andet af datagrundlaget og boligens særlige forhold. Det er ikke en officiel vurdering." }
     },
     {
       "@type": "Question",
       "name": "Er Hemly gratis?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Ja, Hemly er gratis at downloade og bruge. Der er ingen skjulte gebyrer, ingen abonnement og ingen login-krav." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja, Hemly er gratis at downloade og bruge. Ingen skjulte gebyrer, ingen abonnement og ingen login-krav. Appen findes kun til iPhone." }
     },
     {
       "@type": "Question",
       "name": "Hvilke adresser dækker Hemly?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Hemly dækker alle danske adresser via Danmarks officielle adresseregister (DAWA). Vi arbejder på at udvide til Norge og Sverige." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Hemly finder danske adresser via Danmarks Adresseregister (DAWA), men det er ikke det samme som, at boligen kan få et estimat. Villaer, rækkehuse, lejligheder og sommerhuse kan få et prisestimat, når datagrundlaget er tilstrækkeligt. Hemly vurderer kun danske boliger." }
     },
     {
       "@type": "Question",
-      "name": "Hvad koster naboens hus?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Du kan søge på enhver dansk adresse i Hemly og få et prisestimat. Appen viser også hvornår boligen sidst blev solgt og til hvilken pris." }
+      "name": "Gemmer Hemly mine søgninger?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Dine søgninger og watchlist gemmes udelukkende lokalt på din enhed — ikke på vores servere. Læs mere i vores privatlivspolitik." }
+    },
+    {
+      "@type": "Question",
+      "name": "Findes Hemly til Android?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nej. Hemly findes kun til iPhone, og vi lover ikke en dato for en Android-version." }
+    },
+    {
+      "@type": "Question",
+      "name": "Jeg har fundet en fejl — hvad gør jeg?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Send en e-mail til hej@hemly.dk med en beskrivelse af fejlen, din enhed og iOS-version. Vi sætter stor pris på feedback!" }
     }
   ]
 }
@@ -184,7 +205,6 @@
   .footer-links a { font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; }
   .footer-links a:hover { color: rgba(255,255,255,0.7); }
   .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
-.lang-switcher{display:flex;gap:4px;align-items:center}.lang-btn{font-size:18px;text-decoration:none;opacity:0.4;padding:2px 4px;border-radius:4px;transition:opacity .2s}.lang-btn:hover{opacity:0.8}.lang-btn.active{opacity:1}
 </style>
 </head>
 <body>
@@ -192,11 +212,6 @@
 <nav>
   <a class="logo" href="/">Hem<span>ly</span></a>
   <a class="nav-back" href="/">← Tilbage til forsiden</a>
-  <div class="lang-switcher">
-    <a href="/kontakt.html" class="lang-btn active" title="Dansk">🇩🇰</a>
-    <a href="/no/kontakt.html" class="lang-btn" title="Norsk">🇳🇴</a>
-    <a href="/se/kontakt.html" class="lang-btn" title="Svenska">🇸🇪</a>
-  </div>
 </nav>
 
 <div class="hero">
@@ -231,27 +246,27 @@
 
   <div class="faq-item">
     <div class="faq-q">Hvad er boligen egentlig værd — hvordan finder jeg ud af det?</div>
-    <div class="faq-a">Med Hemly søger du en adresse og får et <strong>prisestimat</strong> på under 10 sekunder — baseret på offentlige ejendomsdata. Du justerer for boligens udvendige og indvendige stand, og estimatet opdaterer sig live. Ingen mægler, ingen forpligtelse.</div>
+    <div class="faq-a">Med Hemly søger du en dansk adresse og får et vejledende <strong>prisestimat</strong> med et prisinterval — baseret på offentlige ejendomsdata. Du kan valgfrit justere for boligens stand og se dit eget scenarie ved siden af grundestimatet. Ingen mægler, ingen forpligtelse.</div>
   </div>
 
   <div class="faq-item">
     <div class="faq-q">Hvad koster naboens hus — kan jeg se det i Hemly?</div>
-    <div class="faq-a">Ja. Søg på en hvilken som helst dansk adresse og få et <strong>prisestimat</strong>. Appen viser også hvornår ejendommen sidst blev solgt og til hvilken pris — så du kan sammenligne historisk <strong>ejendomspris</strong> med estimatet i dag.</div>
+    <div class="faq-a">Søg en dansk adresse og få et vejledende <strong>prisestimat</strong>, når boligen kan vurderes. Appen viser også seneste registrerede handel, når oplysningen findes.</div>
   </div>
 
   <div class="faq-item">
     <div class="faq-q">Hvordan beregner Hemly prisestimater?</div>
-    <div class="faq-a">Hemly kombinerer offentlige <strong>ejendomsdata</strong> med markedsbaserede modeller. Estimatet justeres ud fra boligens stand, størrelse, beliggenhed og byggeår — og vises med et prisspænd og en træfsikkerhed i procent. Det er et indikativt estimat, ikke en officiel vurdering.</div>
+    <div class="faq-a">Hemly beregner et grundestimat ud fra offentlige <strong>ejendomsdata</strong> og – hvor de findes – registrerede handler i området. Estimatet vises med et prisinterval. Estimatet er vejledende. Usikkerheden afhænger blandt andet af datagrundlaget og boligens særlige forhold. Det er ikke en officiel vurdering.</div>
   </div>
 
   <div class="faq-item">
     <div class="faq-q">Er Hemly gratis?</div>
-    <div class="faq-a">Ja, Hemly er gratis at downloade og bruge. Ingen skjulte gebyrer, ingen abonnement og ingen login-krav.</div>
+    <div class="faq-a">Ja, Hemly er gratis at downloade og bruge. Ingen skjulte gebyrer, ingen abonnement og ingen login-krav. Appen findes kun til iPhone.</div>
   </div>
 
   <div class="faq-item">
     <div class="faq-q">Hvilke adresser dækker Hemly?</div>
-    <div class="faq-a">Hemly dækker alle danske adresser via Danmarks officielle adresseregister (DAWA). Du kan få et <strong>prisestimat</strong> på villaer, rækkehuse, lejligheder og sommerhuse over hele Danmark. Vi udvider snart til Norge og Sverige.</div>
+    <div class="faq-a">Hemly finder danske adresser via Danmarks Adresseregister (DAWA), men det er ikke det samme som, at boligen kan få et estimat. Villaer, rækkehuse, lejligheder og sommerhuse kan få et <strong>prisestimat</strong>, når datagrundlaget er tilstrækkeligt. Hemly vurderer kun danske boliger.</div>
   </div>
 
   <div class="faq-item">
@@ -260,8 +275,8 @@
   </div>
 
   <div class="faq-item">
-    <div class="faq-q">Hvornår kommer Android-versionen?</div>
-    <div class="faq-a">Vi arbejder på en Android-version. Send en e-mail til <a href="mailto:hej@hemly.dk">hej@hemly.dk</a> med emnet "Android" så giver vi dig besked når den er klar.</div>
+    <div class="faq-q">Findes Hemly til Android?</div>
+    <div class="faq-a">Nej. Hemly findes kun til iPhone, og vi lover ikke en dato for en Android-version.</div>
   </div>
 
   <div class="faq-item">
