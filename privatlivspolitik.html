@@ -84,7 +84,7 @@
     margin-bottom: 6px;
   }
 
-  .content a { color: var(--green); text-decoration: none; }
+  .content a { color: var(--green); text-decoration: none; overflow-wrap: anywhere; }
   .content a:hover { text-decoration: underline; }
 
   .divider {
@@ -130,85 +130,89 @@
 <div class="hero">
   <div class="hero-label">Juridisk</div>
   <h1>Privatlivspolitik</h1>
-  <div class="hero-date">Sidst opdateret: maj 2026</div>
+  <div class="hero-date">Sidst opdateret: 8. oktober 2026</div>
 </div>
 
-<div class="content">
+<main class="content">
 
-  <h2>1. Introduktion</h2>
-  <p>Hos Hemly respekterer vi dit privatliv. Denne privatlivspolitik beskriver, hvilke oplysninger vi indsamler, hvordan vi bruger dem, og hvilke rettigheder du har i forbindelse med dine personoplysninger.</p>
-  <p>Hemly er en dansk boligvurderingsapp, der giver brugere mulighed for at søge på adresser og få prisestimater baseret på offentlige ejendomsdata.</p>
+<h2>1. Om denne politik</h2>
+<p>Hemly giver vejledende boligestimater ud fra ejendomsoplysninger, tilgængelige handelsdata og Hemlys beregninger. Denne politik beskriver oplysninger i Hemly-appen og på hemly.dk. Afsnittene om version 1.0.1 gælder build 11, som endnu ikke er offentligt frigivet. Den aktuelt offentlige App Store-version er 1.0, build 7. Dens tidligere adresse- og opdateringsforløb samt andre ældre installationer er beskrevet særskilt nedenfor.</p>
 
-  <hr class="divider">
+<h2>2. Dataansvarlig og kontakt</h2>
+<p>Dataansvarlig er Andreas Rasmussen (Hemly).<br>Kontakt: <a href="mailto:hej@hemly.dk">hej@hemly.dk</a>.<br>Du kan skrive til os med spørgsmål om dine oplysninger eller for at gøre dine rettigheder gældende.</p>
 
-  <h2>2. Dataansvarlig</h2>
-  <p>Dataansvarlig: <strong>Andreas Rasmussen (Hemly)</strong><br>Kontakt: <a href="mailto:hej@hemly.dk">hej@hemly.dk</a></p>
+<h2>3. Oplysninger på din enhed</h2>
+<p>Gemte boliger, din bolig, personlige stand- og renoveringsscenarier, beregningshistorik og lokale søge-/opslagscaches lagres på din enhed. Du behøver ikke at oprette en konto. Disse oplysninger sendes ikke til Hemly som en samlet personlig profil.</p>
 
-  <hr class="divider">
+<p>Adresseforslag og boligopslag bruger dog netværket. Når du søger eller åbner en bolig, behandler datatjenesterne forespørgslen, og tekniske serverlogs kan bevare oplysninger om opslaget som beskrevet nedenfor.</p>
 
-  <h2>3. Hvilke oplysninger indsamler vi?</h2>
-  <p>Hemly indsamler et minimum af data for at levere vores tjeneste:</p>
-  <ul>
-    <li><strong>Søgehistorik og gemte boliger:</strong> Adresser, du har søgt på, og boliger, du gemmer, gemmes lokalt på din enhed – ikke i en konto hos os.</li>
-    <li><strong>Opslag:</strong> Når du skriver en adresse, sendes teksten til den offentlige adressetjeneste DAWA (Danmarks Adressers Web API) for at finde adresseforslag. <strong>Eksisterende appversioner</strong> sender desuden den indtastede tekst til Kartverkets offentlige adressetjeneste i Norge (ws.geonorge.no) som led i adressesøgningen. Det er en teknisk databehandling og ikke udtryk for, at Hemly dækker norske boliger. En kommende Danmark-only-version af appen vil kun bruge DAWA, men allerede installerede versioner fortsætter med at sende forespørgslen, indtil de er opdateret. Når du åbner en bolig, sendes boligens adresse-id og BFE-nummer til Hemlys egen server, som henter offentlige ejendomsdata fra Datafordeleren (BBR og Ejerfortegnelsen), og appen henter prisniveauer fra Danmarks Statistik. Din IP-adresse indgår teknisk i disse forespørgsler.</li>
-    <li><strong>Ingen brugsanalyse eller fejlrapportering:</strong> Appen indeholder ingen analyse-, sporings- eller crash-rapporteringsværktøjer, og vi indsamler ingen anvendelsesdata.</li>
-  </ul>
-  <p>Vi kræver <strong>ingen login eller registrering</strong> for at bruge appen. Vi indsamler ikke dit navn, e-mail eller andre personoplysninger medmindre du kontakter os direkte.</p>
+<h2>4. Adresseforslag, ejendomsoplysninger og prisstatistik i version 1.0.1 (11)</h2>
+<p>Adressevælgeren: Når du skriver en adresse, sender appen søgeteksten direkte til adressevaelger.dk, som udstiller adresser fra Klimadatastyrelsens Danmarks Adresseregister. Appen bruger valgte adresse-/husnummer-ID'er til at hente adressedetaljer. Tjenesten modtager også din IP-adresse. Klimadatastyrelsens persondatapolitik beskriver IP-registrering til sikkerhed og statistik.</p>
 
-  <hr class="divider">
+<p>Hemlys API: Når du åbner en bolig, sender appen adresse-/husnummer- og eventuelle enhedsidentifikatorer til api.hemly.dk. Handels- og sammenligningsopslag kan også sende BFE-nummer, areal, boligtype, ejerform, postnummer, kommunekode og ejendommens koordinater. Oplysningerne bruges til at finde den rigtige bolig og det relevante beregningsgrundlag. Ejendommens koordinater er ikke telefonens GPS-position.</p>
 
-  <h2>4. Hvordan bruger vi dine oplysninger?</h2>
-  <p>De begrænsede data vi behandler bruges udelukkende til:</p>
-  <ul>
-    <li>At levere og forbedre app-funktionaliteten</li>
-    <li>At besvare henvendelser du sender os</li>
-  </ul>
-  <p>Vi sælger aldrig dine data til tredjeparter og bruger dem ikke til markedsføring.</p>
+<p>Registeropslag: Hemlys server henter oplysninger gennem Datafordeleren og kan bruge det eksisterende ejendoms- og handelsdatasæt på serveren. Adgangsoplysninger til registrene ligger på serveren og er ikke indbygget i appen. Registerkald bruger serverens forbindelse; appen sender ikke telefonens IP-adresse som en særskilt registerparameter. Boligoplysninger og handelsdata kan indirekte vedrøre identificerbare personer, selv om Hemly ikke viser CPR-numre eller ejeres navne.</p>
 
-  <hr class="divider">
+<p>Danmarks Statistik: Appen kan hente prisstatistik direkte fra api.statbank.dk. Forespørgslen angiver geografisk område, boligtype og periode. Den indeholder ikke den indtastede adresse eller dine gemte stand- og renoveringsindstillinger. Tjenesten modtager din IP-adresse. Danmarks Statistik beskriver sin egen IP-behandling og statistikbrug i sin privatlivspolitik.</p>
 
-  <h2>5. Tredjeparts datatjenester</h2>
-  <p>Hemly benytter følgende eksterne tjenester, som kan behandle data:</p>
-  <ul>
-    <li><strong>DAWA (Danmarks Adressers Web API):</strong> Adresseforslag ud fra den tekst, du skriver. Drives af Styrelsen for Dataforsyning og Infrastruktur.</li>
-    <li><strong>Kartverket (Norge):</strong> Modtager i eksisterende appversioner den indtastede adressetekst via den offentlige adressetjeneste ws.geonorge.no. Bruges ikke i en kommende Danmark-only-version; allerede installerede versioner kan dog fortsat sende forespørgslen, indtil de er opdateret.</li>
-    <li><strong>Datafordeleren:</strong> Offentlige ejendomsdata (BBR og Ejerfortegnelsen). Hentes af Hemlys egen server – din enhed kontakter ikke Datafordeleren direkte.</li>
-    <li><strong>Danmarks Statistik:</strong> Offentlige prisniveauer for postnummer og boligtype. Hentes fra din enhed; der sendes ingen adresse eller personoplysninger.</li>
-    <li><strong>Expo:</strong> Bruges til at bygge og distribuere appen. Ved opstart kontakter appen Expos opdateringstjeneste for at tjekke efter opdateringer. Vi har ikke aktiveret analyse- eller crash-rapportering.</li>
-    <li><strong>Apple App Store:</strong> Behandler data i forbindelse med download af appen.</li>
-  </ul>
-  <p><strong>Serverlogs:</strong> Hemlys server (api.hemly.dk) og hjemmesiden fører tekniske adgangslogs med IP-adresse, tidspunkt, den forespurgte side eller adresse-id og app-/browsertype. Adgangslogs roteres dagligt og opbevares i op til ca. 14 dage. Derudover føres tekniske fejllogs. Logs bruges kun til drift og fejlsøgning.</p>
+<h2>5. Tekniske logs og opbevaring</h2>
+<p>Hemlys API-server fører adgangslogs med IP-adresse, tidspunkt, den forespurgte URL inklusive boligidentifikatorer og andre query-parametre, HTTP-status og app-/browsertype (user-agent). Der føres også tekniske fejllogs. Oplysningerne bevares efter, at det enkelte opslag er afsluttet. De bruges til drift, sikkerhed og fejlfinding, ikke til reklamer eller en personlig boligprofil.</p>
 
-  <hr class="divider">
+<p>Webserverens adgangs- og fejllogs roteres dagligt, når filen indeholder data, med højst 14 arkiver plus den aktive fil. Arkiver udskiftes ved efterfølgende rotationer. Det er ikke en fast slettefrist på 14 kalenderdage: en fil uden nye hændelser roteres ikke, så ældre arkiver kan blive liggende.</p>
 
-  <h2>6. Dine rettigheder</h2>
-  <p>Ifølge GDPR har du følgende rettigheder:</p>
-  <ul>
-    <li>Ret til indsigt i dine personoplysninger</li>
-    <li>Ret til berigtigelse af forkerte oplysninger</li>
-    <li>Ret til sletning ("retten til at blive glemt")</li>
-    <li>Ret til begrænsning af behandling</li>
-    <li>Ret til dataportabilitet</li>
-    <li>Ret til at gøre indsigelse mod behandling</li>
-  </ul>
-  <p>Da Hemly ikke kræver login og gemmer dine søgninger og gemte boliger lokalt på din enhed, sletter du disse data ved at afinstallere appen. Tekniske serverlogs slettes automatisk efter opbevaringsperioden.</p>
+<p>Serverprocessens output-/fejllogs og private drifts-/testkopier har ikke en dokumenteret tidsbaseret automatisk sletning i den aktuelle opsætning. De kan derfor bevare ældre tekniske hændelser. Systemets journal og sikkerhedslogs er særskilte; de håndteres efter plads- eller rotationsgrænser, som heller ikke giver en fælles kalenderbaseret slettefrist. Login-/sikkerhedshændelser kan omfatte IP-adresser.</p>
 
-  <hr class="divider">
+<p>Det private app-rollbackarkiv omfatter den gamle runtime, ikke Nginx- eller PM2-logfiler. Der findes separate private proces-/installationskopier uden en dokumenteret automatisk udløbsfrist. Eventuelle fulde diskbackups eller snapshots kan også indeholde logs. Sletning eller rotation af en aktiv logfil sletter ikke i sig selv sådanne kopier. Der er ikke dokumenteret en samlet maksimal opbevaringstid for alle logkopier og backups i den nuværende opsætning.</p>
 
-  <h2>7. Cookies og tracking</h2>
-  <p>Hemly-appen bruger ikke cookies. Vores hjemmeside (hemly.dk) sætter ingen cookies, indlæser skrifttyper fra Google Fonts (Google modtager din IP-adresse ved indlæsning) og foretager ingen brugertracking.</p>
+<p>Lokale gemte boliger og historik bliver på enheden, indtil du sletter oplysningerne eller appens lokale data. At aflaste appen er ikke det samme som at slette dens data. Eventuelle enheds-/iCloud-sikkerhedskopier håndteres af iOS og Apple. Sletning af lokale oplysninger sletter ikke allerede oprettede serverlogs eller mails, du har sendt til support.</p>
 
-  <hr class="divider">
+<p>De eksterne datatjenester har deres egne opbevaringsregler. Hemlys logrotation er ikke en garanti for sletning hos Klimadatastyrelsen, Danmarks Statistik eller andre leverandører. KDS oplyser IP-registrering til sikkerhed og statistik, men den konkrete Adressevælger-opbevaring og statistikfunktion er ikke beskrevet nærmere i det verificerede materiale. Danmarks Statistiks webpolitik beskriver seks måneders IP-opbevaring og anonymiseret besøgstælling for navngivne websites; det er ikke bekræftet som en særskilt frist for api.statbank.dk. Der loves derfor hverken en bestemt API- eller backupfrist hos disse tjenester.</p>
 
-  <h2>8. Ændringer til denne politik</h2>
-  <p>Vi kan opdatere denne privatlivspolitik fra tid til anden. Væsentlige ændringer vil blive kommunikeret via appen. Den seneste version er altid tilgængelig på hemly.dk/privatlivspolitik.</p>
+<p>Frivillige supportmails kan også blive bevaret i mailboksen. Der er ikke dokumenteret en fast automatisk slettefrist for disse henvendelser i den nuværende praksis.</p>
 
-  <div class="contact-box">
-    <p><strong>Spørgsmål om privatliv?</strong></p>
-    <p>Kontakt os på <a href="mailto:hej@hemly.dk">hej@hemly.dk</a> — vi svarer inden for 48 timer.</p>
-  </div>
+<h2>6. Formål og behandlingsgrundlag</h2>
+<p>Hemly behandler de nødvendige opslagsoplysninger for at levere boligopslag og beregningsgrundlag. Tekniske logs bruges til at holde tjenesten tilgængelig, beskytte den og finde fejl. Hvis du kontakter os, bruger vi de oplysninger, du sender, til at besvare din henvendelse.</p>
 
-</div>
+<p>Behandlingsgrundlaget for Hemlys behandling af personoplysninger til disse formål er vores legitime interesse i at levere og drive tjenesten sikkert samt besvare henvendelser, jf. databeskyttelsesforordningens artikel 6, stk. 1, litra f. Du kan gøre indsigelse mod behandling på dette grundlag.</p>
+
+<p>Vi sælger ikke oplysninger om dig, bruger dem ikke til reklamer og sammenkæder dem ikke med andre virksomheders data til annoncering. Datatjenesterne kan behandle tekniske oplysninger til deres egen sikkerhed og statistik, efter deres egne politikker.</p>
+
+<h2>7. Datatjenester, hosting og eksterne links</h2>
+<p>Klimadatastyrelsen og Danmarks Statistik modtager forespørgsler direkte fra appen. Datafordeleren modtager registerforespørgsler fra Hemlys server. API-serveren hostes hos Hetzner. Gemte brugerboliger og scenarier ligger ikke i en Hemly-brugerkonto hos disse leverandører.</p>
+
+<p>hemly.dk serveres fra det eksisterende website på GitHub Pages og bruger Google Fonts på de sider, hvor skrifttyperne indlæses derfra. Website-hosting og skrifttypetjenesten modtager tekniske forbindelsesoplysninger, herunder IP-adresse. API-serverens logrotation beskriver ikke deres opbevaring. Hos de eksterne tjenester kan der forekomme behandling uden for EU/EØS. Deres egne politikker beskriver behandlingen og beskyttelsen af oplysningerne.</p>
+
+<p>Når du vælger at åbne eksterne BBR-, tinglysnings-, vurderings- eller planopslag, åbnes den pågældende tjeneste. Nogle handlinger kopierer boligens adresse/BFE til udklipsholderen, så du kan søge videre. Den eksterne tjenestes egne vilkår og privatlivspolitik gælder for besøget. Hemly omgår ikke login eller adgangskrav.</p>
+
+<p>Apple behandler oplysninger i forbindelse med App Store, TestFlight og eventuelle enhedssikkerhedskopier efter Apples egne regler. I version 1.0.1 (11) er OTA-opdateringer deaktiveret: appen kontakter ikke Expos opdateringstjeneste for at hente sådanne opdateringer. Appen indeholder ikke et reklame-, adfærdsanalyse- eller crash-rapporterings-SDK.</p>
+
+<h2>8. Den offentlige version 1.0 (7) og ældre installationer</h2>
+<p>Ældre appversioner med den tidligere søgekode kan fortsat forsøge at kalde DAWA og sende den indtastede adressetekst til Kartverkets norske adressetjeneste på ws.geonorge.no. Det beskriver teknisk dataflytning og betyder ikke, at Hemly dækker norske boliger. Version 1.0.1 (11) bruger Adressevælgeren til danske adresseforslag og kalder ikke Kartverket.</p>
+
+<p>Tidligere versioner med Expo-opdateringskontrol aktiveret kan fortsat kontakte Expos tjeneste og sende tekniske oplysninger om appen, installationen og forbindelsen. Expo beskriver oplysninger om operativsystem, projekt-ID og et tilfældigt installationstoken til at afgøre, om en installation har forespurgt efter en opdatering. Denne behandling er afgrænset til disse tidligere versioner. En ændret hjemmeside eller en ny App Store-version opdaterer ikke automatisk alle eksisterende installationer.</p>
+
+<h2>9. Dine rettigheder</h2>
+<p>Du kan efter databeskyttelsesreglerne have ret til indsigt, berigtigelse, sletning, begrænsning, dataportabilitet og til at gøre indsigelse mod behandling. Rettighederne afhænger af behandlingen og det konkrete grundlag. Kontakt <a href="mailto:hej@hemly.dk">hej@hemly.dk</a>.</p>
+
+<p>Hemly har ingen brugerkonto til at identificere serverlogs ud fra. Det kan være nødvendigt at afgrænse et opslag med relevante oplysninger, eksempelvis tidspunkt og IP-adresse. Send ikke flere oplysninger end nødvendigt. Lokale data kan du håndtere på din enhed. Henvendelser om leverandørernes egen behandling kan også rettes til den pågældende leverandør.</p>
+
+<p>Du kan klage til Datatilsynet på datatilsynet.dk, hvis du mener, at dine personoplysninger behandles i strid med reglerne.</p>
+
+<h2>10. Cookies og tracking</h2>
+<p>Hemly-appen indeholder ikke reklamesporing eller et analyse-SDK. hemly.dk har ikke en Hemly-cookie til brugertracking; forbindelser til website-hosting og Google Fonts kan stadig medføre tekniske logs. Tekniske logs er ikke det samme som reklamesporing, men de er stadig databehandling.</p>
+
+<h2>11. Datakilder og rettigheder</h2>
+<p>Hemly anvender data fra Bygnings- og Boligregistret (BBR), Klimadatastyrelsens Danmarks Adresseregister (DAR) og Ejerfortegnelsens handelsoplysninger samt relevante ejendomsrelationer gennem Datafordeleren. Frie grunddata er underlagt de relevante registervilkår og Creative Commons CC BY 4.0. EJF's særskilte adgangskrav gælder samtidig; licensen giver ikke adgang til fortrolige eller beskyttede data.</p>
+
+<p>Kilder: BBR; Klimadatastyrelsen/DAR; Ejerfortegnelsen; Geodatastyrelsen/ejendomsoplysninger, hvor disse anvendes; Danmarks Statistik/Statistikbanken. Hemly bearbejder oplysningerne til egne vejledende beregninger. Kilderne har ikke godkendt eller garanteret Hemlys estimater.</p>
+
+<h2>12. Ændringer og kontakt</h2>
+<p>Vi kan opdatere denne politik, når appens databehandling ændres. Den seneste politik findes på <a href="https://hemly.dk/privatlivspolitik.html">https://hemly.dk/privatlivspolitik.html</a>.<br>Spørgsmål om privatliv kan sendes til <a href="mailto:hej@hemly.dk">hej@hemly.dk</a>.</p>
+
+<h2>Links til de nævnte politikker og vilkår</h2>
+<p>Klimadatastyrelsen: <a href="https://www.klimadatastyrelsen.dk/om-klimadatastyrelsen/politikker-retningslinjer-og-whistleblowerordning/persondatapolitik">https://www.klimadatastyrelsen.dk/om-klimadatastyrelsen/politikker-retningslinjer-og-whistleblowerordning/persondatapolitik</a><br>Danmarks Statistik: <a href="https://www.dst.dk/da/OmDS/om-hjemmesiden/privatlivspolitik">https://www.dst.dk/da/OmDS/om-hjemmesiden/privatlivspolitik</a><br>Datafordeler/BBR: <a href="https://datafordeler.dk/vejledning/brugervilkaar/bygnings-og-boligregistret-bbr/">https://datafordeler.dk/vejledning/brugervilkaar/bygnings-og-boligregistret-bbr/</a><br>Datafordeler/DAR: <a href="https://datafordeler.dk/vejledning/brugervilkaar/danmarks-adresseregister-dar/">https://datafordeler.dk/vejledning/brugervilkaar/danmarks-adresseregister-dar/</a><br>Datafordeler/EJF: <a href="https://datafordeler.dk/vejledning/brugervilkaar/ejerfortegnelsen-ejf/">https://datafordeler.dk/vejledning/brugervilkaar/ejerfortegnelsen-ejf/</a><br>Datafordeler/ejendomsoplysninger: <a href="https://datafordeler.dk/vejledning/brugervilkaar/ejendomsoplysninger-ebr-og-mat/">https://datafordeler.dk/vejledning/brugervilkaar/ejendomsoplysninger-ebr-og-mat/</a><br>Statistikbank API: <a href="https://www.dst.dk/da/Statistik/hjaelp-til-statistikbanken/api">https://www.dst.dk/da/Statistik/hjaelp-til-statistikbanken/api</a><br>CC BY 4.0: <a href="https://creativecommons.org/licenses/by/4.0/deed.da">https://creativecommons.org/licenses/by/4.0/deed.da</a><br>Hetzner: <a href="https://www.hetzner.com/legal/privacy-policy/">https://www.hetzner.com/legal/privacy-policy/</a><br>GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a><br>Google: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a><br>Apple: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a><br>Expo (ældre installationer): <a href="https://expo.dev/privacy">https://expo.dev/privacy</a><br>Expo om slutbrugerdata: <a href="https://expo.dev/privacy-explained">https://expo.dev/privacy-explained</a><br>Kartverket (ældre installationer): <a href="https://www.kartverket.no/om-kartverket/personvern">https://www.kartverket.no/om-kartverket/personvern</a><br>Datatilsynet: <a href="https://www.datatilsynet.dk/borger/hvad-er-dine-rettigheder">https://www.datatilsynet.dk/borger/hvad-er-dine-rettigheder</a></p>
+
+</main>
 
 <footer>
   <div class="footer-logo">Hem<span>ly</span></div>
