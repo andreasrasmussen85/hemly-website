@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hemly – boligvurdering og prisestimat på danske boliger</title>
-<meta name="description" content="Gratis iPhone-app med vejledende prisestimat på danske boliger ud fra offentlige ejendomsdata. Se boligoplysninger, og gem boliger, du vil følge.">
+<meta name="description" content="Gratis app til iPhone og Android med vejledende prisestimat på danske boliger ud fra offentlige ejendomsdata. Se boligoplysninger, og gem boliger, du vil følge.">
 <meta name="keywords" content="hvad er boligen værd, prisestimat bolig, boligpris Danmark, ejendomspris, hvad koster naboens hus, boligprisestimat, ejendomsdata Danmark, boligpris app, hvad er min bolig værd, boligprisudvikling, ejendomsværdi, sælge bolig pris, boligmarked Danmark">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Hemly">
@@ -17,26 +17,26 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:image" content="https://hemly.dk/og-image-2026-09.png">
 <meta property="og:title" content="Hemly – boligvurdering og prisestimat på danske boliger">
-<meta property="og:description" content="Gratis iPhone-app med vejledende prisestimat på danske boliger ud fra offentlige ejendomsdata. Se boligoplysninger og gem boliger, du vil følge.">
+<meta property="og:description" content="Gratis app til iPhone og Android med vejledende prisestimat på danske boliger ud fra offentlige ejendomsdata. Se boligoplysninger og gem boliger, du vil følge.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hemly.dk/">
 <meta property="og:site_name" content="Hemly">
-<meta property="og:image:alt" content="Hemly – vejledende boligvurdering på iPhone">
+<meta property="og:image:alt" content="Hemly – vejledende boligvurdering på iPhone og Android">
 <meta property="og:locale" content="da_DK">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Hemly – boligvurdering og prisestimat på danske boliger">
-<meta name="twitter:description" content="Gratis iPhone-app med vejledende prisestimat på danske boliger ud fra offentlige ejendomsdata.">
+<meta name="twitter:description" content="Gratis app til iPhone og Android med vejledende prisestimat på danske boliger ud fra offentlige ejendomsdata.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Hemly",
-  "description": "Gratis iPhone-app med vejledende prisestimat på danske boliger ud fra offentlige ejendomsdata. Se boligoplysninger, justér valgfrit for stand, og gem boliger, du vil følge.",
+  "description": "Gratis app til iPhone og Android med vejledende prisestimat på danske boliger ud fra offentlige ejendomsdata. Se boligoplysninger, justér valgfrit for stand, og gem boliger, du vil følge.",
   "applicationCategory": "FinanceApplication",
-  "operatingSystem": "iOS",
+  "operatingSystem": ["iOS", "Android"],
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "DKK" },
-  "downloadUrl": "https://apps.apple.com/dk/app/hemly/id6778827933",
-  "installUrl": "https://apps.apple.com/dk/app/hemly/id6778827933",
+  "downloadUrl": ["https://apps.apple.com/dk/app/hemly/id6778827933", "https://play.google.com/store/apps/details?id=dk.hemly.app"],
+  "installUrl": ["https://apps.apple.com/dk/app/hemly/id6778827933", "https://play.google.com/store/apps/details?id=dk.hemly.app"],
   "url": "https://hemly.dk/",
   "inLanguage": "da-DK",
   "featureList": "Vejledende prisestimat med prisinterval, Boligoplysninger, Valgfri standjustering, Gemte boliger med ændringer i Hemlys estimat over tid"
@@ -99,7 +99,7 @@ nav {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 24px;
   list-style: none;
 }
 .nav-links a {
@@ -112,6 +112,7 @@ nav {
 .nav-links a:hover { color: var(--forest); }
 
 .nav-cta {
+  white-space: nowrap;
   background: var(--forest);
   color: var(--white) !important;
   padding: 10px 22px;
@@ -199,6 +200,7 @@ nav {
 }
 
 .btn-primary {
+  white-space: nowrap;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -687,6 +689,7 @@ nav {
   position: relative;
 }
 .app-badge {
+  white-space: nowrap;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -800,6 +803,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
     <li><a href="#features">Funktioner</a></li>
     <li><a href="#hvordan">Sådan virker det</a></li>
     <li><a href="https://apps.apple.com/dk/app/hemly/id6778827933" class="nav-cta">Hent gratis til iPhone</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=dk.hemly.app" class="nav-cta">Hent gratis til Android</a></li>
   </ul>
   <details class="nav-menu">
     <summary>Menu</summary>
@@ -807,6 +811,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
       <li><a href="#features">Funktioner</a></li>
       <li><a href="#hvordan">Sådan virker det</a></li>
       <li><a href="https://apps.apple.com/dk/app/hemly/id6778827933">Hent gratis til iPhone</a></li>
+      <li><a href="https://play.google.com/store/apps/details?id=dk.hemly.app">Hent gratis til Android</a></li>
     </ul>
   </details>
 </nav>
@@ -826,6 +831,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
       <a href="https://apps.apple.com/dk/app/hemly/id6778827933" class="btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         Hent gratis til iPhone
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=dk.hemly.app" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17L21 12 4 3.5z"/></svg>
+        Hent gratis til Android
       </a>
       <a href="#hvordan" class="btn-secondary">
         Se hvordan det virker
@@ -1113,7 +1122,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 {"@type":"Question","name":"Viser Hemly udbudspriser eller salgspriser?","acceptedAnswer":{"@type":"Answer","text":"Hemly tager udgangspunkt i registrerede handler, hvor de findes – ikke udbudspriser. Derfor kan Hemlys estimat afvige fra tallene på boligportaler. Hvor der ikke er nok handler, bruger Hemly bredere offentlige prisniveauer, og prisintervallet bliver bredere."}},
 {"@type":"Question","name":"Hvor præcist er estimatet?","acceptedAnswer":{"@type":"Answer","text":"Estimatet er vejledende. Usikkerheden afhænger blandt andet af datagrundlaget og boligens særlige forhold. Når Hemly kan beregne et estimat, vises det med et sandsynligt prisinterval. Hemly er ikke en mæglervurdering og kan ikke bruges som juridisk eller økonomisk grundlag."}},
 {"@type":"Question","name":"Skal jeg justere standen for at få et estimat?","acceptedAnswer":{"@type":"Answer","text":"Nej. Grundestimatet vises med det samme ud fra registrerede oplysninger. Standjustering er valgfri: du kan selv vurdere udvendig og indvendig stand og se et standjusteret scenarie ved siden af grundestimatet."}},
-{"@type":"Question","name":"Er Hemly gratis, og hvilke enheder virker den på?","acceptedAnswer":{"@type":"Answer","text":"Ja. Hemly er gratis, og der kræves ingen oprettelse eller login. Appen findes kun til iPhone."}},
+{"@type":"Question","name":"Er Hemly gratis, og hvilke enheder virker den på?","acceptedAnswer":{"@type":"Answer","text":"Ja. Hemly er gratis, og der kræves ingen oprettelse eller login. Appen findes til iPhone og Android."}},
 {"@type":"Question","name":"Kan jeg følge en bolig over tid?","acceptedAnswer":{"@type":"Answer","text":"Ja. Gem boligen, så viser Hemly, hvordan Hemlys estimat for boligen har ændret sig, siden du gemte den. En ændring kan skyldes nye data eller en opdateret beregning og er ikke nødvendigvis udtryk for en ændring i markedet. Hemly sender ikke notifikationer."}}
 ]}
 </script>
@@ -1130,7 +1139,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
       <details style="background:#fff;border:1px solid #E4E1D8;border-radius:14px;padding:18px 22px"><summary style="font-weight:600;font-size:16px;color:#1a1a18;cursor:pointer">Viser Hemly udbudspriser eller salgspriser?</summary><p style="font-size:15px;color:#4a4a46;line-height:1.8;margin-top:12px">Hemly tager udgangspunkt i <strong style="color:#1a1a18">registrerede handler</strong>, hvor de findes — ikke udbudspriser. Derfor kan Hemlys estimat afvige fra tallene på boligportaler. Hvor der ikke er nok handler, bruger Hemly bredere offentlige prisniveauer, og prisintervallet bliver bredere.</p></details>
       <details style="background:#fff;border:1px solid #E4E1D8;border-radius:14px;padding:18px 22px"><summary style="font-weight:600;font-size:16px;color:#1a1a18;cursor:pointer">Hvor præcist er estimatet?</summary><p style="font-size:15px;color:#4a4a46;line-height:1.8;margin-top:12px">Estimatet er vejledende. Usikkerheden afhænger blandt andet af datagrundlaget og boligens særlige forhold. Når Hemly kan beregne et estimat, vises det med et sandsynligt prisinterval. Hemly er ikke en mæglervurdering og kan ikke bruges som juridisk eller økonomisk grundlag.</p></details>
       <details style="background:#fff;border:1px solid #E4E1D8;border-radius:14px;padding:18px 22px"><summary style="font-weight:600;font-size:16px;color:#1a1a18;cursor:pointer">Skal jeg justere standen for at få et estimat?</summary><p style="font-size:15px;color:#4a4a46;line-height:1.8;margin-top:12px">Nej. Grundestimatet vises med det samme ud fra registrerede oplysninger. Standjustering er valgfri: du kan selv vurdere udvendig og indvendig stand og se et standjusteret scenarie ved siden af grundestimatet.</p></details>
-      <details style="background:#fff;border:1px solid #E4E1D8;border-radius:14px;padding:18px 22px"><summary style="font-weight:600;font-size:16px;color:#1a1a18;cursor:pointer">Er Hemly gratis, og hvilke enheder virker den på?</summary><p style="font-size:15px;color:#4a4a46;line-height:1.8;margin-top:12px">Ja. Hemly er gratis, og der kræves ingen oprettelse eller login. Appen findes kun til iPhone.</p></details>
+      <details style="background:#fff;border:1px solid #E4E1D8;border-radius:14px;padding:18px 22px"><summary style="font-weight:600;font-size:16px;color:#1a1a18;cursor:pointer">Er Hemly gratis, og hvilke enheder virker den på?</summary><p style="font-size:15px;color:#4a4a46;line-height:1.8;margin-top:12px">Ja. Hemly er gratis, og der kræves ingen oprettelse eller login. Appen findes til iPhone og Android.</p></details>
       <details style="background:#fff;border:1px solid #E4E1D8;border-radius:14px;padding:18px 22px"><summary style="font-weight:600;font-size:16px;color:#1a1a18;cursor:pointer">Kan jeg følge en bolig over tid?</summary><p style="font-size:15px;color:#4a4a46;line-height:1.8;margin-top:12px">Ja. Gem boligen, så viser Hemly, hvordan Hemlys estimat for boligen har ændret sig, siden du gemte den. En ændring kan skyldes nye data eller en opdateret beregning og er ikke nødvendigvis udtryk for en ændring i markedet. Hemly sender ikke notifikationer.</p></details>
     </div>
   </div>
@@ -1138,15 +1147,19 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 <!-- CTA -->
 <section class="cta-section" id="download">
-  <h2 class="cta-h2">Hent Hemly gratis til iPhone</h2>
+  <h2 class="cta-h2">Hent Hemly gratis til iPhone og Android</h2>
   <p class="cta-sub">Ingen abonnement, ingen login. Estimatet er vejledende, og dækningen afhænger af boligtype og datagrundlag.</p>
   <div class="app-badges">
     <a href="https://apps.apple.com/dk/app/hemly/id6778827933" class="app-badge">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
       Hent gratis til iPhone
     </a>
+    <a href="https://play.google.com/store/apps/details?id=dk.hemly.app" class="app-badge">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17L21 12 4 3.5z"/></svg>
+      Hent gratis til Android
+    </a>
   </div>
-  <p class="cta-note">Kun til iPhone.</p>
+  <p class="cta-note">Til iPhone og Android.</p>
 </section>
 </main>
 

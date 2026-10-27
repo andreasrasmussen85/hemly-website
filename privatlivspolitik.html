@@ -164,7 +164,7 @@
 
 <p>Det private app-rollbackarkiv omfatter den gamle runtime, ikke Nginx- eller PM2-logfiler. Der findes separate private proces-/installationskopier uden en dokumenteret automatisk udløbsfrist. Eventuelle fulde diskbackups eller snapshots kan også indeholde logs. Sletning eller rotation af en aktiv logfil sletter ikke i sig selv sådanne kopier. Der er ikke dokumenteret en samlet maksimal opbevaringstid for alle logkopier og backups i den nuværende opsætning.</p>
 
-<p>Lokale gemte boliger og historik bliver på enheden, indtil du sletter oplysningerne eller appens lokale data. At aflaste appen er ikke det samme som at slette dens data. Eventuelle enheds-/iCloud-sikkerhedskopier håndteres af iOS og Apple. Sletning af lokale oplysninger sletter ikke allerede oprettede serverlogs eller mails, du har sendt til support.</p>
+<p>Lokale gemte boliger og historik bliver på enheden, indtil du sletter oplysningerne eller appens lokale data. At aflaste appen er ikke det samme som at slette dens data. Eventuelle enhedssikkerhedskopier håndteres af iOS og Apple eller Android og Google efter enhedens indstillinger. Sletning af lokale oplysninger sletter ikke allerede oprettede serverlogs eller mails, du har sendt til support.</p>
 
 <p>De eksterne datatjenester har deres egne opbevaringsregler. Hemlys logrotation er ikke en garanti for sletning hos Klimadatastyrelsen, Danmarks Statistik eller andre leverandører. KDS oplyser IP-registrering til sikkerhed og statistik, men den konkrete Adressevælger-opbevaring og statistikfunktion er ikke beskrevet nærmere i det verificerede materiale. Danmarks Statistiks webpolitik beskriver seks måneders IP-opbevaring og anonymiseret besøgstælling for navngivne websites; det er ikke bekræftet som en særskilt frist for api.statbank.dk. Der loves derfor hverken en bestemt API- eller backupfrist hos disse tjenester.</p>
 
@@ -184,7 +184,7 @@
 
 <p>Når du vælger at åbne eksterne BBR-, tinglysnings-, vurderings- eller planopslag, åbnes den pågældende tjeneste. Nogle handlinger kopierer boligens adresse/BFE til udklipsholderen, så du kan søge videre. Den eksterne tjenestes egne vilkår og privatlivspolitik gælder for besøget. Hemly omgår ikke login eller adgangskrav.</p>
 
-<p>Apple behandler oplysninger i forbindelse med App Store, TestFlight og eventuelle enhedssikkerhedskopier efter Apples egne regler. I version 1.0.1 (11) er OTA-opdateringer deaktiveret: appen kontakter ikke Expos opdateringstjeneste for at hente sådanne opdateringer. Appen indeholder ikke et reklame-, adfærdsanalyse- eller crash-rapporterings-SDK.</p>
+<p>Apple behandler oplysninger i forbindelse med App Store, TestFlight og eventuelle enhedssikkerhedskopier efter Apples egne regler. Google behandler oplysninger i forbindelse med Google Play og eventuelle Android-enhedssikkerhedskopier efter Googles egne regler. I version 1.0.1 (11) er OTA-opdateringer deaktiveret: appen kontakter ikke Expos opdateringstjeneste for at hente sådanne opdateringer. Appen indeholder ikke et reklame-, adfærdsanalyse- eller crash-rapporterings-SDK.</p>
 
 <h2>8. Den offentlige version 1.0 (7) og ældre installationer</h2>
 <p>Ældre appversioner med den tidligere søgekode kan fortsat forsøge at kalde DAWA og sende den indtastede adressetekst til Kartverkets norske adressetjeneste på ws.geonorge.no. Det beskriver teknisk dataflytning og betyder ikke, at Hemly dækker norske boliger. Version 1.0.1 (11) bruger Adressevælgeren til danske adresseforslag og kalder ikke Kartverket.</p>
